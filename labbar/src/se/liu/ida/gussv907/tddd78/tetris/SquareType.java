@@ -11,8 +11,10 @@ public enum SquareType
     {
         Random rnd = new Random();
 
+        int NumOfTypes = SquareType.values().length;
+
         for(int i = 0; i < 25; i++) {
-	    System.out.println(rnd.nextInt(100));
+	    System.out.println(SquareType.values()[rnd.nextInt(NumOfTypes)]);
 	}
     }
 }
