@@ -2,31 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0a1ae48-7987-4a0e-9628-1f8d2cfa358b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/labbar/doc/readme.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labbar/labbar.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab1/Exercise1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab1/Exercise10.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab1/Exercise2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab1/Exercise3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab1/Exercise4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab1/Exercise5.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab1/Exercise8.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab1/Exercise9.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab2/Appointment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab2/Calender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab2/Date.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab2/Month.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab2/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab2/Queue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab2/Slump.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab2/Stack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab2/TimePoint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab2/TimeSpan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab31/AbstractShape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab31/Circle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab31/DiagramComponent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab31/Rectangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab31/Shape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab31/TestCircle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab31/TestShapes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab31/Text.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/SquareType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab3/DiagramComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab3/DiagramComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab3/DiagramViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab3/DiagramViewer.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,56 +25,111 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab2/Calender.java">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab31/Circle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab3/DiagramViewer.java">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab31/Text.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab3/TestShapes.java">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab31/TestCircle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="44" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab3/AbstractShape.java">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab3/Circle.java">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab3/Rectangle.java">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab3/Shape.java">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab31/TestShapes.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="675">
+              <caret line="45" column="1" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab3/DiagramComponent.java">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab3/DiagramViewer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab31/DiagramComponent.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+              <folding>
+                <element signature="e#357#358#0" expanded="true" />
+                <element signature="e#399#400#0" expanded="true" />
+                <element signature="e#436#437#0" expanded="true" />
+                <element signature="e#465#466#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab3/TestShapes.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" selection-start-line="1" selection-end-line="45" selection-end-column="1" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab3/TestCircle.java">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            </state>
+          </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab3/Text.java">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="521">
+              <caret line="35" column="1" selection-start-line="2" selection-end-line="35" selection-end-column="1" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -99,13 +141,29 @@
         <option value="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab1/lab2/Calender.java" />
         <option value="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab2/Calender.java" />
         <option value="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab3/Text.java" />
+        <option value="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/SquareType.java" />
+        <option value="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab3/Shape.java" />
+        <option value="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab3/DiagramComponent.java" />
+        <option value="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab3/DiagramViewer.java" />
+        <option value="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab31/Shape.java" />
+        <option value="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab3/AbstractShape.java" />
+        <option value="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab31/AbstractShape.java" />
+        <option value="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab31/Circle.java" />
+        <option value="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab31/Rectangle.java" />
+        <option value="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab31/Text.java" />
+        <option value="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab31/TestCircle.java" />
+        <option value="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab31/TestShapes.java" />
+        <option value="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab31/DiagramComponent.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="4">
-    <option name="x" value="960" />
+    <option name="x" value="959" />
     <option name="width" value="961" />
-    <option name="height" value="1051" />
+    <option name="height" value="1050" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -150,7 +208,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="tddd78" type="462c0819:PsiDirectoryNode" />
               <item name="from_2017" type="462c0819:PsiDirectoryNode" />
-              <item name="lab2" type="462c0819:PsiDirectoryNode" />
+              <item name="lab1" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TDDD78-labbar" type="b2602c69:ProjectViewProjectNode" />
@@ -159,6 +217,13 @@
               <item name="tddd78" type="462c0819:PsiDirectoryNode" />
               <item name="from_2017" type="462c0819:PsiDirectoryNode" />
               <item name="lab3" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TDDD78-labbar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="labbar" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="tddd78" type="462c0819:PsiDirectoryNode" />
+              <item name="tetris" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -169,14 +234,21 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548252487167" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548257057038" />
+    <property name="create.test.in.the.same.root" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/labbar" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="preferences.pathVariables" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017" />
+      <recent name="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab1" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -190,6 +262,54 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="Application.SquareType">
+    <configuration name="SquareType" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="se.liu.ida.gussv907.tddd78.tetris.SquareType" />
+      <module name="labbar" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="se.liu.ida.gussv907.tddd78.tetris.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestCircle (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="se.liu.ida.gussv907.tddd78.from_2017.lab31.TestCircle" />
+      <module name="labbar" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="se.liu.ida.gussv907.tddd78.from_2017.lab31.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestCircle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="se.liu.ida.gussv907.tddd78.from_2017.lab3.TestCircle" />
+      <module name="labbar" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="se.liu.ida.gussv907.tddd78.from_2017.lab3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.SquareType" />
+        <item itemvalue="Application.TestCircle (1)" />
+        <item itemvalue="Application.TestCircle" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -201,23 +321,24 @@
       <option name="presentableId" value="Default" />
       <updated>1548249024252</updated>
       <workItem from="1548249030955" duration="1617000" />
-      <workItem from="1548251190254" duration="1272000" />
+      <workItem from="1548251190254" duration="5675000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2889000" />
+    <option name="totallyTimeSpent" value="7292000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="960" y="0" width="961" height="1051" extended-state="4" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25082147" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15662651" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" sideWeight="0.4950712" visible="true" weight="0.32897604" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -229,7 +350,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" visible="true" weight="0.32897604" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5049288" side_tool="true" visible="true" weight="0.32897604" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -251,9 +372,6 @@
     <entry file="file://$PROJECT_DIR$/labbar/doc/readme.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab1/Exercise3.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab1/Exercise5.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -270,9 +388,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab1/Exercise1.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab1/Exercise9.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab1/lab2/TimeSpan.java">
@@ -320,9 +435,6 @@
     <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab2/Month.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab2/Queue.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab2/Person.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -335,32 +447,158 @@
     <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab2/Calender.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab3/DiagramViewer.java">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/SquareType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab3/TestShapes.java">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab2/Queue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab3/AbstractShape.java">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab1/Exercise3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab3/Circle.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab3/Rectangle.java">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab1/Exercise9.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab3/Shape.java">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab3/DiagramComponent.java">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab31/Shape.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab3/TestCircle.java">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab3/AbstractShape.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="29" column="13" lean-forward="true" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab3/Circle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="38" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab3/Rectangle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="35" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab31/Rectangle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="51" selection-start-column="51" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab31/AbstractShape.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab3/Text.java">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="521">
+          <caret line="35" column="1" selection-start-line="2" selection-end-line="35" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab31/Text.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab3/TestCircle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab3/TestShapes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="45" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab31/TestShapes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="45" column="1" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab31/TestCircle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="44" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab31/Circle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab3/DiagramViewer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab3/DiagramComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/from_2017/lab31/DiagramComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+          <folding>
+            <element signature="e#357#358#0" expanded="true" />
+            <element signature="e#399#400#0" expanded="true" />
+            <element signature="e#436#437#0" expanded="true" />
+            <element signature="e#465#466#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
@@ -368,6 +606,17 @@
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
           <splitter-proportions>
             <option name="proportions">
               <list>
