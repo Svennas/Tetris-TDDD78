@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/labbar/labbar.iml" filepath="$PROJECT_DIR$/labbar/labbar.iml" />
-      <module fileurl="file://$PROJECT_DIR$/labbar/labbar_2017.iml" filepath="$PROJECT_DIR$/labbar/labbar_2017.iml" />
     </modules>
   </component>
 </project>
