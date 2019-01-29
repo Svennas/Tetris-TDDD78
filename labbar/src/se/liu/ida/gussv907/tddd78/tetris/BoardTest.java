@@ -12,8 +12,9 @@ public class BoardTest
         System.out.println(text.convertToText(board));
 
         for (int i = 0; i < 10; i++) {
-            board.randomBoard();
-	    System.out.println(text.convertToText(board));
+	    BoardToTextConverter rndText = new BoardToTextConverter();
+	    board.randomBoard();
+	    System.out.println(rndText.convertToText(board));
 	}
     }
 }
