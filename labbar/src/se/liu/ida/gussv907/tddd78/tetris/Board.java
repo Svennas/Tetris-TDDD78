@@ -9,6 +9,20 @@ public class Board
     private int width, height;
     private Random rnd = new Random();
     private int numOfTypes = SquareType.values().length;
+    private Poly falling;
+    private int polyXPos, polyYPos;
+
+
+    public SquareType getSquareAt(int x, int y) {
+	/* Takes a position and determines if the square at that position is
+	 * falling or is still. If it is falling it should return at
+	 * SquareType from Poly falling. Otherwise it should return a
+	 * regular(?) SquareType.
+	 */
+	//Read the instructions again...
+
+        return SquareType.EMPTY;
+    }
 
     public Board(final int width, final int height) {
 	this.width = width;
@@ -31,11 +45,6 @@ public class Board
 	}
     }
 
-    public static void main(String[] args) {
-        Board board = new Board(5, 8);
-        System.out.println(board.squares[3][3]);
-    }
-
     public SquareType getSquareType(int posX, int posY) {
 	return squares[posX][posY];
     }
@@ -46,5 +55,22 @@ public class Board
 
     public int getHeight() {
 	return height;
+    }
+
+    public Poly getFalling() {
+	return falling;
+    }
+
+    public int getPolyXPos() {
+	return polyXPos;
+    }
+
+    public int getPolyYPos() {
+	return polyYPos;
+    }
+
+    public static void main(String[] args) {
+      	Board board = new Board(5, 8);
+      	System.out.println(board.squares[3][3]);
     }
 }
