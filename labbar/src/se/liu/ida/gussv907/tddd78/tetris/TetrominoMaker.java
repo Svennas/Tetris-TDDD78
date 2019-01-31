@@ -47,77 +47,70 @@ public class TetrominoMaker
     private static Poly polyI() {
         int size = 4;
         SquareType[][] iSquare = new SquareType[size][size];
-        for (int w = 0; w < size; w++) {
-            for (int h = 0; h < size; h++) {
-                iSquare[w][h] = SquareType.I;
-	    }
-	}
+        iSquare[0][1] = SquareType.I;
+	iSquare[1][1] = SquareType.I;
+	iSquare[2][1] = SquareType.I;
+	iSquare[3][1] = SquareType.I;
         return new Poly(iSquare);
     }
 
     private static Poly polyO() {
 	int size = 2;
 	SquareType[][] oSquare = new SquareType[size][size];
-	for (int w = 0; w < size; w++) {
-	    for (int h = 0; h < size; h++) {
-		oSquare[w][h] = SquareType.O;
-	    }
-	}
+	oSquare[0][0] = SquareType.O;
+	oSquare[0][1] = SquareType.O;
+	oSquare[1][0] = SquareType.O;
+	oSquare[1][1] = SquareType.O;
 	return new Poly(oSquare);
     }
 
     private static Poly polyT() {
         int size = 3;
         SquareType[][] tSquare = new SquareType[size][size];
-	for (int w = 0; w < size; w++) {
-	    for (int h = 0; h < size; h++) {
-	        tSquare[w][h] = SquareType.T;
-	    }
-	}
+	tSquare[0][1] = SquareType.T;
+	tSquare[1][0] = SquareType.T;
+	tSquare[1][1] = SquareType.T;
+	tSquare[1][2] = SquareType.T;
 	return new Poly(tSquare);
     }
 
     private static Poly polyS() {
         int size = 3;
         SquareType[][] sSquare = new SquareType[size][size];
-    	for (int w = 0; w < size; w++) {
-    	    for (int h = 0; h < size; h++) {
-    	        sSquare[w][h] = SquareType.S;
-    	    }
-    	}
+        sSquare[0][1] = SquareType.S;
+	sSquare[0][2] = SquareType.S;
+	sSquare[1][0] = SquareType.S;
+	sSquare[1][1] = SquareType.S;
     	return new Poly(sSquare);
     }
 
     private static Poly polyZ() {
         int size = 3;
         SquareType[][] zSquare = new SquareType[size][size];
-    	for (int w = 0; w < size; w++) {
-    	    for (int h = 0; h < size; h++) {
-    	        zSquare[w][h] = SquareType.Z;
-    	    }
-    	}
+    	zSquare[0][0] = SquareType.Z;
+	zSquare[0][1] = SquareType.Z;
+	zSquare[1][1] = SquareType.Z;
+	zSquare[1][2] = SquareType.Z;
     	return new Poly(zSquare);
     }
 
     private static Poly polyJ() {
         int size = 3;
         SquareType[][] jSquare = new SquareType[size][size];
-    	for (int w = 0; w < size; w++) {
-    	    for (int h = 0; h < size; h++) {
-    	        jSquare[w][h] = SquareType.J;
-    	    }
-    	}
+        jSquare[0][1] = SquareType.J;
+	jSquare[1][1] = SquareType.J;
+	jSquare[2][0] = SquareType.J;
+	jSquare[2][1] = SquareType.J;
     	return new Poly(jSquare);
     }
 
     private static Poly polyL() {
         int size = 3;
         SquareType[][] lSquare = new SquareType[size][size];
-    	for (int w = 0; w < size; w++) {
-    	    for (int h = 0; h < size; h++) {
-    	        lSquare[w][h] = SquareType.L;
-    	    }
-    	}
+        lSquare[0][1] = SquareType.L;
+	lSquare[1][1] = SquareType.L;
+	lSquare[2][1] = SquareType.L;
+	lSquare[2][2] = SquareType.L;
     	return new Poly(lSquare);
     }
 
