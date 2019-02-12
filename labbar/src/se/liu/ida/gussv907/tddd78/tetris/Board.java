@@ -9,9 +9,18 @@ public class Board
     private int width, height;
     private Random rnd = new Random();
     private int numOfTypes = SquareType.values().length;
-    private Poly falling;
+    private Boolean polyIsFalling;
     private int polyXPos, polyYPos;
+    private Poly falling;
 
+    /*
+    private Poly polyFalling() {
+	if(polyIsFalling) {
+	    //Poly falling;
+	    return
+	}
+    }
+*/
 
     public SquareType getSquareAt(int x, int y) {
 	/* Takes a position and determines if the square at that position is
@@ -20,9 +29,12 @@ public class Board
 	 * regular(?) SquareType.
 	 */
 	//Read the instructions again...
-
-
-        return SquareType.EMPTY;
+	if (squares[x][y] == SquareType.EMPTY && polyIsFalling) {
+	    
+	}
+	else {
+	    return squares[x][y];
+	}
     }
 
     public Board(final int width, final int height) {
