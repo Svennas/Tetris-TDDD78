@@ -9,30 +9,51 @@ public class Board
     private int width, height;
     private Random rnd = new Random();
     private int numOfTypes = SquareType.values().length;
-    private Boolean polyIsFalling;
-    private int polyXPos, polyYPos;
-    private Poly falling;
 
-    /*
-    private Poly polyFalling() {
-	if(polyIsFalling) {
-	    //Poly falling;
-	    return
-	}
-    }
-*/
+    private TetrominoMaker testpoly = new TetrominoMaker();
+    private Boolean polyIsFalling = true;
+    private int polyX = 1, polyY = 1;
+    private Poly falling = (testpoly.getPoly(0));
+
 
     public SquareType getSquareAt(int x, int y) {
 	/* Takes a position and determines if the square at that position is
 	 * falling or is still. If it is falling it should return at
 	 * SquareType from Poly falling. Otherwise it should return a
-	 * regular(?) SquareType.
+	 * SquareType from Board.
 	 */
-	//Read the instructions again...
-	if (squares[x][y] == SquareType.EMPTY && polyIsFalling) {
-	    
+
+	int polyX2 = polyX + falling.getWidth();
+	int polyY2 = polyY + falling.getHeight();
+
+	if (x >= polyX && x <= polyX2 && y >= polyY && y <= polyY2 && polyIsFalling) {
+	    /*Om det är den första vill du skriva ut den första i Poly. Om x är lika
+	    // med den första + 1 ska du skriva ut den andra, etc.
+	    //
+	    for (int i = 0; )
+	    	if (x == i + polyX)
+
+	    for (int w = 0; w < falling.getWidth(); w++) {
+	        for (int h = 0; h < falling.getHeight(); h++) {
+		    if (x == w + polyX && y == h + polyY) {
+
+		    }
+		}
+	    }*/
+
+	    if (falling.getPolySquares()[x - polyX][y - polyY] != SquareType.EMPTY) {
+		System.out.println("poly");
+		System.out.println(falling.getPolySquares()[x - polyX][y - polyY]);
+		return falling.getPolySquares()[x - polyX][y - polyY];
+
+	    }
+	    else {
+		System.out.println("board in poly");
+		return squares[x][y];
+	    }
 	}
 	else {
+	    System.out.println("board");
 	    return squares[x][y];
 	}
     }
@@ -74,16 +95,23 @@ public class Board
 	return falling;
     }
 
-    public int getPolyXPos() {
-	return polyXPos;
+    public int getPolyX() {
+	return polyX;
     }
 
-    public int getPolyYPos() {
-	return polyYPos;
+    public int getPolyY() {
+	return polyY;
     }
 
     public static void main(String[] args) {
       	Board board = new Board(5, 8);
       	System.out.println(board.squares[3][3]);
+      	System.out.println(board.getSquareAt(1, 1));
+
+	TetrominoMaker testpoly = new TetrominoMaker();
+	Poly falling = (testpoly.getPoly(0));
+	System.out.println("hej");
+	System.out.println(falling.getPolySquares()[1][1]);
+	System.out.println("hej");
     }
 }

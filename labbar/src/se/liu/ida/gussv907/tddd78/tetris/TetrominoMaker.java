@@ -44,9 +44,18 @@ public class TetrominoMaker
 	return poly;
     }
 
-    private static Poly polyI() {
+    public static void emptyBackground(SquareType[][] square, int size) {
+        for(int width = 0; width < size; width++) {
+            for(int height = 0; height < size; height++) {
+		square[width][height] = SquareType.EMPTY;
+	    }
+	}
+    }
+
+    public static Poly polyI() {
         int size = 4;
         SquareType[][] iSquare = new SquareType[size][size];
+	emptyBackground(iSquare, size);
         iSquare[0][1] = SquareType.I;
 	iSquare[1][1] = SquareType.I;
 	iSquare[2][1] = SquareType.I;
@@ -54,9 +63,10 @@ public class TetrominoMaker
         return new Poly(iSquare);
     }
 
-    private static Poly polyO() {
+    public static Poly polyO() {
 	int size = 2;
 	SquareType[][] oSquare = new SquareType[size][size];
+	emptyBackground(oSquare, size);
 	oSquare[0][0] = SquareType.O;
 	oSquare[0][1] = SquareType.O;
 	oSquare[1][0] = SquareType.O;
@@ -64,9 +74,10 @@ public class TetrominoMaker
 	return new Poly(oSquare);
     }
 
-    private static Poly polyT() {
+    public static Poly polyT() {
         int size = 3;
         SquareType[][] tSquare = new SquareType[size][size];
+	emptyBackground(tSquare, size);
 	tSquare[0][1] = SquareType.T;
 	tSquare[1][0] = SquareType.T;
 	tSquare[1][1] = SquareType.T;
@@ -74,9 +85,10 @@ public class TetrominoMaker
 	return new Poly(tSquare);
     }
 
-    private static Poly polyS() {
+    public static Poly polyS() {
         int size = 3;
         SquareType[][] sSquare = new SquareType[size][size];
+	emptyBackground(sSquare, size);
         sSquare[0][1] = SquareType.S;
 	sSquare[0][2] = SquareType.S;
 	sSquare[1][0] = SquareType.S;
@@ -84,9 +96,10 @@ public class TetrominoMaker
     	return new Poly(sSquare);
     }
 
-    private static Poly polyZ() {
+    public static Poly polyZ() {
         int size = 3;
         SquareType[][] zSquare = new SquareType[size][size];
+	emptyBackground(zSquare, size);
     	zSquare[0][0] = SquareType.Z;
 	zSquare[0][1] = SquareType.Z;
 	zSquare[1][1] = SquareType.Z;
@@ -94,9 +107,10 @@ public class TetrominoMaker
     	return new Poly(zSquare);
     }
 
-    private static Poly polyJ() {
+    public static Poly polyJ() {
         int size = 3;
         SquareType[][] jSquare = new SquareType[size][size];
+	emptyBackground(jSquare, size);
         jSquare[0][1] = SquareType.J;
 	jSquare[1][1] = SquareType.J;
 	jSquare[2][0] = SquareType.J;
@@ -104,9 +118,10 @@ public class TetrominoMaker
     	return new Poly(jSquare);
     }
 
-    private static Poly polyL() {
+    public static Poly polyL() {
         int size = 3;
         SquareType[][] lSquare = new SquareType[size][size];
+	emptyBackground(lSquare, size);
         lSquare[0][1] = SquareType.L;
 	lSquare[1][1] = SquareType.L;
 	lSquare[2][1] = SquareType.L;
@@ -114,7 +129,7 @@ public class TetrominoMaker
     	return new Poly(lSquare);
     }
 
-    private static Poly polyEmpty() {
+    public static Poly polyEmpty() {
         SquareType[][] emptySquare = new SquareType[0][0];
         return new Poly(emptySquare);
         }

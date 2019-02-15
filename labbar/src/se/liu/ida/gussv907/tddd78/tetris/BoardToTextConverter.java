@@ -8,7 +8,7 @@ public class BoardToTextConverter
         for(int width = 0; width < board.getWidth(); width++) {
             for(int height = 0; height < board.getHeight(); height++) {
 
-                switch(board.getSquareType(width, height)) {
+                switch(board.getSquareAt(width, height)) {
 
 		    case EMPTY:
 			boardString.append("-");
@@ -34,6 +34,8 @@ public class BoardToTextConverter
 		    case L:
 			boardString.append("L");
 			break;
+		    default:
+		        boardString.append("-");
 		}
 	    }
 	    boardString.append("\n");

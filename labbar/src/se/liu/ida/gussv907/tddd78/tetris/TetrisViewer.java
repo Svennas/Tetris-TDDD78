@@ -4,18 +4,24 @@ import java.awt.*;
 
 public class TetrisViewer
 {
-    public static GraphicsConfiguration gc;
-    private final static String newline = "\n";
-    private final static String text = "Hejsan Svejsan";
+    private JFrame frame;
+    BoardToTextConverter text = new BoardToTextConverter();
 
-    public TetrisViewer(Board viewer) {
-    	JFrame frame = new JFrame(gc);
-    	frame.setTitle("Testing JFrame");
-    	frame.setSize(600, 400);
+    //System.out.println(text.convertToText(board));
+    //private JTextPane text = new JTextPane();
+    //private JTextArea area = new JTextArea(4, 5);
+    //private JLabel status = new JLabel("Hallå");
+
+    public TetrisViewer(Board board) {
+	frame = new JFrame("TetrisViewer");
+
+	JTextArea textarea = new JTextArea(board.getWidth(), board.getHeight());
+	textarea.setText(text.convertToText(board));
+
+    	//frame.setSize(600, 400);
+    	frame.setLayout(new BorderLayout());
+    	frame.add(textarea, BorderLayout.CENTER);
     	frame.setVisible(true);
-	JTextArea area = new JTextArea(5, 5);
-	area.append(text + newline);
-	area.setEditable(false);
     }
 
     public static void main(String[] args) {
