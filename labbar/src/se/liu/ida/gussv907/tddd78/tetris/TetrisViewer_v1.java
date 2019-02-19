@@ -2,10 +2,10 @@ package se.liu.ida.gussv907.tddd78.tetris;
 import javax.swing.*;
 import java.awt.*;
 
-public class TetrisViewer
+public class TetrisViewer_v1
 {
 
-    public TetrisViewer(Board board) {
+    public TetrisViewer_v1(Board board) {
 	BoardToTextConverter text = new BoardToTextConverter();
 	JFrame frame = new JFrame("TetrisViewer");
 
@@ -21,6 +21,6 @@ public class TetrisViewer
 
     public static void main(String[] args) {
         Board board = new Board(5, 5);
-        TetrisViewer test = new TetrisViewer(board);
+        TetrisViewer_v1 test = new TetrisViewer_v1(board);
     }
 }

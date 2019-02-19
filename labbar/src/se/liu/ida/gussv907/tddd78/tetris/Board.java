@@ -11,12 +11,14 @@ public class Board
     private int numOfTypes = SquareType.values().length;
 
     private TetrominoMaker testpoly = new TetrominoMaker();
-    private Boolean polyIsFalling = true;
+    private Boolean polyIsFalling;
     private int polyX = 1, polyY = 1;
     private Poly falling = (testpoly.getPoly(0));
 
 
     public SquareType getSquareAt(int x, int y) {
+
+        polyIsFalling = true; //For now...
 	/* Takes a position and determines if the square at that position is
 	 * falling or is still. If it is falling it should return at
 	 * SquareType from Poly falling. Otherwise it should return a
