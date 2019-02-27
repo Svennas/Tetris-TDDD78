@@ -5,14 +5,20 @@ import java.awt.event.ActionEvent;
 
 public class TetrisViewer
 {
+    private final static int ONE_SECOND = 1000;
+    private Timer clockTimer;
     public static Board board = new Board(5, 5);
 
-    private static final Action action = new AbstractAction()
+    final Action oneGameStep = new AbstractAction()
     {
-	@Override public void actionPerformed(final ActionEvent event) {
+	public void actionPerformed(ActionEvent event) {
 	    board.randomBoard();
 	}
     };
+    clockTimer = new
+    clockTimer = new Timer(ONE_SECOND, oneGameStep);
+    clockTimer.setCoalesce(true);
+    clockTimer.start();
 
     public TetrisViewer(Board board) {
 	BoardToTextConverter text = new BoardToTextConverter();
@@ -32,10 +38,8 @@ public class TetrisViewer
 
 	TetrisViewer test = new TetrisViewer(board);
 
-        final Timer clockTimer = new Timer(500, action);
-        clockTimer.setCoalesce(true);
-        clockTimer.start();
-        clockTimer.stop();
+
+        //clockTimer.stop();
 
         //Board board = new Board(5, 5);
         //board.randomBoard();
