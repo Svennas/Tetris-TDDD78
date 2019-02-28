@@ -16,6 +16,7 @@ public class TetrisViewer
 	public void actionPerformed(ActionEvent event) {
 	    Board board = new Board(5, 5);
 	    board.randomBoard();
+	    
 	    JTextArea textarea = new JTextArea(board.getWidth(), board.getHeight());
 	    JFrameUpdater(board, frame);
 	    //new TetrisViewer(board);
