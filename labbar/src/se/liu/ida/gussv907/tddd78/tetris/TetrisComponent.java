@@ -28,6 +28,14 @@ public class TetrisComponent extends JComponent
         super.paintComponent(g);
         final Graphics2D g2d = (Graphics2D) g;
 
+        for (int w = 0; w < board.getWidth(); w++) {
+            for (int h = 0; h < board.getHeight(); h++) {
+                    g2d.setColor(getSquareTypeColor(board.getSquareAt(w, h)));
+                    g2d.drawRect(w, h, 10, 10);
+            }
+        }
+
+
         g2d.setColor(getSquareTypeColor(SquareType.S));
         g2d.drawRect(10, 10, 10, 10);
     }

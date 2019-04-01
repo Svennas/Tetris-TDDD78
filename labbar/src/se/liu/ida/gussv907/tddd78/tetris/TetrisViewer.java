@@ -5,71 +5,33 @@ import java.awt.event.ActionEvent;
 
 public class TetrisViewer
 {
-    private final static int ONE_SECOND = 1000;
-    private static Timer clockTimer;
-    private static JFrame frame = new JFrame("TetrisViewer");
-    //public static Board board = new Board(5, 5);
-
-    /* --------------- For one step in the game --------------- */
-    final static Action oneGameStep = new AbstractAction()
-    {
-	public void actionPerformed(ActionEvent event) {
-	    Board board = new Board(5, 5);
-	    board.randomBoard();
-	    
-	    JTextArea textarea = new JTextArea(board.getWidth(), board.getHeight());
-	    JFrameUpdater(board, frame);
-	    //new TetrisViewer(board);
-	}
-    };
-
-    /* --------------- End for one step in the game --------------- */
+    private JFrame frame;
 
     public TetrisViewer(Board board) {
-	//BoardToTextConverter text = new BoardToTextConverter();
-	//JFrame frame = new JFrame("TetrisViewer");
-
-
-	//JTextArea textarea = new JTextArea(board.getWidth(), board.getHeight());
+	this.frame  = new JFrame("TetrisViewer");
 	JFrameUpdater(board, frame);
-	/*
-	//textarea.setText(text.convertToText(board));
-
-    	frame.setLayout(new BorderLayout());
-    	frame.add(textarea, BorderLayout.CENTER);
-    	textarea.setFont(new Font("Monospaced", Font.PLAIN, 20));
-    	frame.pack();
-    	frame.setVisible(true);
-    	*/
     }
 
     public static void JFrameUpdater(Board board, JFrame frame) {
-	JTextArea textarea = new JTextArea(board.getWidth(), board.getHeight());
+	TetrisComponent component = new TetrisComponent(board);
 
-	BoardToTextConverter text = new BoardToTextConverter();
-	textarea.setText(text.convertToText(board));
-
+	frame.setSize(component.getPreferredSize());
 	frame.setLayout(new BorderLayout());
-	frame.add(textarea, BorderLayout.CENTER);
-	textarea.setFont(new Font("Monospaced", Font.PLAIN, 20));
+	frame.add(component, BorderLayout.CENTER);
+	frame.repaint();
 	frame.pack();
 	frame.setVisible(true);
     }
 
-    public static void main(String[] args) {
+    /* ----------------- For one step in the game ----------------- */
+    final Action oneGameStep = new AbstractAction()
+    {
+	public void actionPerformed(ActionEvent event) {
+	    Board board = new Board(5, 5);
+	    board.randomBoard();
 
-	Board board = new Board(5, 5);
-
-	TetrisViewer test = new TetrisViewer(board);
-
-	clockTimer = new Timer(ONE_SECOND, oneGameStep);
-	clockTimer.setCoalesce(true);
-	clockTimer.start();
-
-        //clockTimer.stop();
-
-        //Board board = new Board(5, 5);
-        //board.randomBoard();
-
-    }
+	    JFrameUpdater(board, frame);
+	}
+    };
+    /* --------------- End for one step in the game --------------- */
 }
