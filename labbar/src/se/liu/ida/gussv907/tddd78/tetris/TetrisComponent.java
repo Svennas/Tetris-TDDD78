@@ -5,39 +5,42 @@ import java.awt.*;
 import java.util.EnumMap;
 import java.awt.Color;
 
-public class TetrisComponent extends JComponent
+public class TetrisComponent extends JComponent implements BoardListener
 {
     private Board board;
-    private final static int SQUARE_SIZE = 10; //Size in pixels
+    private final static int SQUARE_PIXEL_SIZE = 100; //Size in pixels
     EnumMap<SquareType, Color> colorMap;
 
     public TetrisComponent(final Board board) {
 	this.board = board;
 	this.colorMap = new EnumMap<>(SquareType.class);
+	this.repaint();
 	makeSquareTypeColors();
     }
 
     public Dimension getPreferredSize() {
-        int width = SQUARE_SIZE * board.getWidth();
-        int height = SQUARE_SIZE * board.getHeight();
+        int width = SQUARE_PIXEL_SIZE * board.getWidth();
+        int height = SQUARE_PIXEL_SIZE * board.getHeight();
         return new Dimension(width, height);
     }
 
     @Override
     public void paintComponent(Graphics g) {
+        final int squareSize = 50;
+
         super.paintComponent(g);
         final Graphics2D g2d = (Graphics2D) g;
 
-        for (int w = 0; w < board.getWidth(); w++) {
-            for (int h = 0; h < board.getHeight(); h++) {
-                    g2d.setColor(getSquareTypeColor(board.getSquareAt(w, h)));
-                    g2d.drawRect(w, h, 10, 10);
+        //board.randomBoard();
+
+        for (int width = 0; width < board.getWidth(); width++) {
+            for (int height = 0; height < board.getHeight(); height++) {
+                g2d.setColor(getSquareTypeColor(board.getSquareAt(width, height)));
+
+                g2d.fillRect(width * squareSize, height * squareSize,
+                             width + squareSize, height + squareSize);
             }
         }
-
-
-        g2d.setColor(getSquareTypeColor(SquareType.S));
-        g2d.drawRect(10, 10, 10, 10);
     }
 
     public void makeSquareTypeColors () {
@@ -55,5 +58,13 @@ public class TetrisComponent extends JComponent
         return colorMap.get(square);
     }
 
-    //public void makeSquare()
+    public TetrisComponent updateBoard(Board board) {
+        board.randomBoard();
+        TetrisComponent component = new TetrisComponent(board);
+        return component;
+    }
+
+    @Override public void boardChanged() {
+        repaint();
+    }
 }

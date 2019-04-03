@@ -1,7 +1,9 @@
 package se.liu.ida.gussv907.tddd78.tetris;
 
 
-import java.util.Random;
+import java.awt.*;
+import java.util.*;
+import java.util.List;
 
 public class Board
 {
@@ -15,6 +17,27 @@ public class Board
     private int polyX = 1, polyY = 1;
     private Poly falling = (testpoly.getPoly(0));
 
+    private List<BoardListener> listener;
+
+    public void tick() {
+        if (polyIsFalling) {
+            polyX++;
+            polyY++;
+	}
+        else {
+            //add new Poly on Board
+	}
+    }
+
+   /* private void notifyListeners() {
+        for(BoardListener element : listener) {
+            element.boardChanged();
+	}
+    }*/
+
+    public void addBoardListener(BoardListener bl) {
+        listener.add(bl);
+    }
 
     public SquareType getSquareAt(int x, int y) {
 
@@ -79,6 +102,7 @@ public class Board
 		squares[w][h] = SquareType.values()[rnd.nextInt(numOfTypes)];
 	    }
 	}
+	//notifyListeners();
     }
 
     public SquareType getSquareType(int posX, int posY) {

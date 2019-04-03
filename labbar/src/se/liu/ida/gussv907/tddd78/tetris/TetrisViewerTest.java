@@ -13,13 +13,21 @@ public class TetrisViewerTest
 
 	Board board = new Board(5, 5);
 
-	TetrisViewer test = new TetrisViewer(board);
 
-	clockTimer = new Timer(ONE_SECOND, test.oneGameStep);
+
+	TetrisComponent comp = new TetrisComponent(board);
+
+	TetrisViewer test = new TetrisViewer(board, comp);
+
+	Game game = new Game(board, comp, test);
+
+	clockTimer = new Timer(ONE_SECOND, game.oneGameStep);
 
 	clockTimer.setCoalesce(true);
 
 	clockTimer.start();
+
+	//clockTimer.stop();
 
     }
 }

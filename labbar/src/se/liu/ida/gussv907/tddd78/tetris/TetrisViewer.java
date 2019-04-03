@@ -6,32 +6,21 @@ import java.awt.event.ActionEvent;
 public class TetrisViewer
 {
     private JFrame frame;
+    //private TetrisComponent component;
 
-    public TetrisViewer(Board board) {
-	this.frame  = new JFrame("TetrisViewer");
-	JFrameUpdater(board, frame);
+    public TetrisViewer(Board board, TetrisComponent component) {
+	this.frame = new JFrame("TetrisViewer");
+	//this.component = new TetrisComponent(board);
+
+	boardUpdater(board, component);
     }
 
-    public static void JFrameUpdater(Board board, JFrame frame) {
-	TetrisComponent component = new TetrisComponent(board);
-
-	frame.setSize(component.getPreferredSize());
-	frame.setLayout(new BorderLayout());
-	frame.add(component, BorderLayout.CENTER);
-	frame.repaint();
-	frame.pack();
-	frame.setVisible(true);
+    public void boardUpdater(Board board, TetrisComponent component) {
+        board.randomBoard();
+        component.repaint();
+        frame.setLayout(new BorderLayout());
+        frame.add(component, BorderLayout.CENTER);
+        frame.setSize(component.getPreferredSize());
+        frame.setVisible(true);
     }
-
-    /* ----------------- For one step in the game ----------------- */
-    final Action oneGameStep = new AbstractAction()
-    {
-	public void actionPerformed(ActionEvent event) {
-	    Board board = new Board(5, 5);
-	    board.randomBoard();
-
-	    JFrameUpdater(board, frame);
-	}
-    };
-    /* --------------- End for one step in the game --------------- */
 }
