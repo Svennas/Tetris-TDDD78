@@ -6,6 +6,8 @@ public class BoardTest
     public static void main (String[] args) {
 
 	Board board = new Board(8, 8);
+	board.setPolyIsFalling(false);
+	board.setPolyType(3);
 
 	BoardToTextConverter text = new BoardToTextConverter();
 

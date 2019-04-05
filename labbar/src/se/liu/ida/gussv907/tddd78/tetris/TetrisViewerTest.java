@@ -11,7 +11,11 @@ public class TetrisViewerTest
 
     public static void main(String[] args) {
 
-	Board board = new Board(5, 5);
+	Board board = new Board(10, 10);
+
+	board.setPolyIsFalling(false);
+
+	board.setPolyType(0);
 
 
 
@@ -20,6 +24,8 @@ public class TetrisViewerTest
 	TetrisViewer test = new TetrisViewer(board, comp);
 
 	Game game = new Game(board, comp, test);
+
+	board.addBoardListener(comp);
 
 	clockTimer = new Timer(ONE_SECOND, game.oneGameStep);
 

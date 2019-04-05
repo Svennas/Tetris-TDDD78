@@ -12,80 +12,84 @@ public class Board
     private Random rnd = new Random();
     private int numOfTypes = SquareType.values().length;
 
-    private TetrominoMaker testpoly = new TetrominoMaker();
-    private Boolean polyIsFalling;
-    private int polyX = 1, polyY = 1;
-    private Poly falling = (testpoly.getPoly(0));
+    private boolean polyIsFalling;
+    private int polyX, polyY = 0; //Starting position of Poly (left-upper corner)
+    private int polyType; //Decides the Poly type
+    private Poly falling = null;
 
-    private List<BoardListener> listener;
+    private ArrayList<BoardListener> listeners = new ArrayList<BoardListener>();
+
+
+    public void addBoardListener(BoardListener bl) {
+          listeners.add(bl);
+    }
+
+    private void notifyListeners() {
+         for (BoardListener listElement : listeners) {
+             listElement.boardChanged();
+ 	}
+     }
 
     public void tick() {
         if (polyIsFalling) {
-            polyX++;
             polyY++;
-	}
+    	}
         else {
-            //add new Poly on Board
-	}
+               //add new Poly on Board
+    	}
     }
 
-   /* private void notifyListeners() {
-        for(BoardListener element : listener) {
-            element.boardChanged();
+    public void fallingPoly() {
+	TetrominoMaker poly = new TetrominoMaker();
+        if (polyIsFalling) {
+            this.falling = poly.getPoly(polyType);
 	}
-    }*/
-
-    public void addBoardListener(BoardListener bl) {
-        listener.add(bl);
     }
 
     public SquareType getSquareAt(int x, int y) {
-
-        polyIsFalling = true; //For now...
 	/* Takes a position and determines if the square at that position is
 	 * falling or is still. If it is falling it should return at
 	 * SquareType from Poly falling. Otherwise it should return a
 	 * SquareType from Board.
 	 */
 
-	int polyX2 = polyX + falling.getWidth();
-	int polyY2 = polyY + falling.getHeight();
+	fallingPoly(); //Initiates a falling Poly
 
-	if (x >= polyX && x <= polyX2 && y >= polyY && y <= polyY2 && polyIsFalling) {
-	    /*Om det är den första vill du skriva ut den första i Poly. Om x är lika
-	    // med den första + 1 ska du skriva ut den andra, etc.
-	    //
-	    for (int i = 0; )
-	    	if (x == i + polyX)
-
-	    for (int w = 0; w < falling.getWidth(); w++) {
-	        for (int h = 0; h < falling.getHeight(); h++) {
-		    if (x == w + polyX && y == h + polyY) {
-
-		    }
-		}
-	    }*/
-
-	    if (falling.getPolySquares()[x - polyX][y - polyY] != SquareType.EMPTY) {
-		System.out.println("poly");
-		System.out.println(falling.getPolySquares()[x - polyX][y - polyY]);
-		return falling.getPolySquares()[x - polyX][y - polyY];
-
-	    }
-	    else {
-		System.out.println("board in poly");
-		return squares[x][y];
-	    }
+	if (falling == null) {
+	    return squares[x][y];
 	}
 	else {
-	    System.out.println("board");
-	    return squares[x][y];
+	    int polyX2 = polyX + falling.getWidth() - 1;
+	    int polyY2 = polyY + falling.getHeight() - 1;
+
+	    //Checks if x and y are within the coordinates of the Poly
+	    if (x >= polyX && x <= polyX2 && y >= polyY && y <= polyY2) {
+		//Checks if the coordinate inside the Poly is empty or not
+		if (falling.getPolySquares()[x - polyX][y - polyY] != SquareType.EMPTY) {
+		    //System.out.println("poly");
+		    //System.out.println(falling.getPolySquares()[x - polyX][y - polyY]);
+
+		    return falling.getPolySquares()[x - polyX][y - polyY];
+
+		}
+		//Else if there is no square at that position
+		else {
+		    //System.out.println("board in poly");
+		    return squares[x][y];
+		}
+	    }
+	    //There is no Poly at the position
+	    else {
+		//System.out.println("board");
+		return squares[x][y];
+	    }
 	}
     }
 
     public Board(final int width, final int height) {
 	this.width = width;
 	this.height = height;
+	this.polyX = (height / 2) - 1;
 	squares = new SquareType[width][height];
 
 	for (int w = 0; w < width; w++) {
@@ -102,11 +106,7 @@ public class Board
 		squares[w][h] = SquareType.values()[rnd.nextInt(numOfTypes)];
 	    }
 	}
-	//notifyListeners();
-    }
-
-    public SquareType getSquareType(int posX, int posY) {
-	return squares[posX][posY];
+	notifyListeners();
     }
 
     public int getWidth() {
@@ -117,10 +117,6 @@ public class Board
 	return height;
     }
 
-    public Poly getFalling() {
-	return falling;
-    }
-
     public int getPolyX() {
 	return polyX;
     }
@@ -128,6 +124,17 @@ public class Board
     public int getPolyY() {
 	return polyY;
     }
+
+    public void setPolyType(final int polyType) {
+	this.polyType = polyType;
+	notifyListeners();
+    }
+
+    public void setPolyIsFalling(final boolean polyIsFalling) {
+   	this.polyIsFalling = polyIsFalling;
+   	notifyListeners();
+    }
+
 
     public static void main(String[] args) {
       	Board board = new Board(5, 8);

@@ -17,7 +17,7 @@ public class TetrisViewer
 
     public void boardUpdater(Board board, TetrisComponent component) {
         board.randomBoard();
-        component.repaint();
+        //component.repaint();
         frame.setLayout(new BorderLayout());
         frame.add(component, BorderLayout.CENTER);
         frame.setSize(component.getPreferredSize());

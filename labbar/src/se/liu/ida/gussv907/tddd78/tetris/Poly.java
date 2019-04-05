@@ -4,15 +4,12 @@ public class Poly
 {
     private SquareType[][] polySquares;
     private int width, height;
-    //private int falling;
 
     public Poly(final SquareType[][] polySquares) {
 	this.polySquares = polySquares;
-	width = polySquares[0].length;
-	height = polySquares.length;
+	this.width = polySquares[0].length;
+	this.height = polySquares.length;
     }
-
-    //Added getters just in case, dont know if they will be of use...
 
     public SquareType[][] getPolySquares() {
 	return polySquares;

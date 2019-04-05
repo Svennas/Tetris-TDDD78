@@ -22,7 +22,7 @@ public class Game
     {
 	public void actionPerformed(ActionEvent event) {
 	    viewer.boardUpdater(board, component);
-	    component.repaint();
+	    //component.repaint();
 	}
     };
     /* --------------- End for one step in the game --------------- */

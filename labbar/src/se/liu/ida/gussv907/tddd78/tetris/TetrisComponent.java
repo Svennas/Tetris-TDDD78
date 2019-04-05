@@ -58,12 +58,6 @@ public class TetrisComponent extends JComponent implements BoardListener
         return colorMap.get(square);
     }
 
-    public TetrisComponent updateBoard(Board board) {
-        board.randomBoard();
-        TetrisComponent component = new TetrisComponent(board);
-        return component;
-    }
-
     @Override public void boardChanged() {
         repaint();
     }
