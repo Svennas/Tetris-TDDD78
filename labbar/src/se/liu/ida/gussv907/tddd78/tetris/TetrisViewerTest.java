@@ -11,11 +11,11 @@ public class TetrisViewerTest
 
     public static void main(String[] args) {
 
-	Board board = new Board(10, 10);
+	Board board = new Board(50, 50);
 
 	board.setPolyIsFalling(false);
 
-	board.setPolyType(0);
+	//board.setPolyType(0);
 
 
 

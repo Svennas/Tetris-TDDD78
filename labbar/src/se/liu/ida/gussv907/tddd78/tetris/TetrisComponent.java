@@ -8,7 +8,7 @@ import java.awt.Color;
 public class TetrisComponent extends JComponent implements BoardListener
 {
     private Board board;
-    private final static int SQUARE_PIXEL_SIZE = 100; //Size in pixels
+    private final static int SQUARE_PIXEL_SIZE = 20; //Size in pixels
     EnumMap<SquareType, Color> colorMap;
 
     public TetrisComponent(final Board board) {
@@ -26,19 +26,16 @@ public class TetrisComponent extends JComponent implements BoardListener
 
     @Override
     public void paintComponent(Graphics g) {
-        final int squareSize = 50;
 
         super.paintComponent(g);
         final Graphics2D g2d = (Graphics2D) g;
-
-        //board.randomBoard();
 
         for (int width = 0; width < board.getWidth(); width++) {
             for (int height = 0; height < board.getHeight(); height++) {
                 g2d.setColor(getSquareTypeColor(board.getSquareAt(width, height)));
 
-                g2d.fillRect(width * squareSize, height * squareSize,
-                             width + squareSize, height + squareSize);
+                g2d.fillRect(width * SQUARE_PIXEL_SIZE, height * SQUARE_PIXEL_SIZE,
+                             width + SQUARE_PIXEL_SIZE, height + SQUARE_PIXEL_SIZE);
             }
         }
     }
@@ -61,4 +58,6 @@ public class TetrisComponent extends JComponent implements BoardListener
     @Override public void boardChanged() {
         repaint();
     }
+
+
 }
