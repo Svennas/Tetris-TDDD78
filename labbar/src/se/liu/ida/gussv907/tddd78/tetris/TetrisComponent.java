@@ -2,6 +2,7 @@ package se.liu.ida.gussv907.tddd78.tetris;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.util.EnumMap;
 import java.awt.Color;
 
@@ -9,12 +10,13 @@ public class TetrisComponent extends JComponent implements BoardListener
 {
     private Board board;
     private final static int SQUARE_PIXEL_SIZE = 20; //Size in pixels
-    EnumMap<SquareType, Color> colorMap;
+    private EnumMap<SquareType, Color> colorMap;
 
     public TetrisComponent(final Board board) {
 	this.board = board;
 	this.colorMap = new EnumMap<>(SquareType.class);
-	this.repaint();
+
+        createKeyPresses();
 	makeSquareTypeColors();
     }
 
@@ -60,4 +62,25 @@ public class TetrisComponent extends JComponent implements BoardListener
     }
 
 
+    public void createKeyPresses () {
+        this.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke("LEFT"),
+                                                                "left");
+        this.getActionMap().put("left", moveLeft);
+
+        this.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke("RIGHT"),
+                                                                        "right");
+        this.getActionMap().put("right", moveRight);
+    }
+
+    private final Action moveLeft = new AbstractAction() {
+        @Override public void actionPerformed(final ActionEvent e) {
+            board.movePolyLeft();
+        }
+    };
+
+    private final Action moveRight = new AbstractAction() {
+        @Override public void actionPerformed(final ActionEvent e) {
+            board.movePolyRight();
+        }
+    };
 }

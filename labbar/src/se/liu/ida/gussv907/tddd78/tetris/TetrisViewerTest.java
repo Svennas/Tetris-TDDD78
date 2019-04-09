@@ -21,9 +21,11 @@ public class TetrisViewerTest
 
 	TetrisComponent comp = new TetrisComponent(board);
 
-	TetrisViewer test = new TetrisViewer(board, comp);
+	TetrisViewer test = new TetrisViewer(comp);
 
 	Game game = new Game(board, comp, test);
+
+	//Game keypress = new Game();
 
 	board.addBoardListener(comp);
 

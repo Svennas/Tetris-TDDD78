@@ -17,31 +17,12 @@ public class Game extends JComponent
     }
 
 
-    /* ----------------- For one step in the game ----------------- */
+    //For one step in the game
     final Action oneGameStep = new AbstractAction()
     {
 	public void actionPerformed(ActionEvent event) {
 	    board.tick();
-	    viewer.boardUpdater(board, component);
-	    //board.randomBoard();
+	    viewer.boardUpdater(component);
 	}
     };
-    /* --------------- End for one step in the game --------------- */
-    public void KeyAction() {
-        JComponent pane = viewer.getFrame().getRootPane();
-
-      	final InputMap in = pane.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW);
-      	in.put(KeyStroke.getKeyStroke("LEFT"), "left");
-
-      	final ActionMap act = pane.getActionMap();
-	act.put("left", new MoveLeft());
-    }
-
-    private class MoveLeft extends AbstractAction {
-	@Override public void actionPerformed(final ActionEvent e) {
-	    board.movePolyLeft();
-	}
-    }
-
-
 }
