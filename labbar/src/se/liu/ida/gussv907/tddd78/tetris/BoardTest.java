@@ -1,22 +1,26 @@
 package se.liu.ida.gussv907.tddd78.tetris;
 
-public class BoardTest
+/**
+ * Test the Board
+ */
+public final class BoardTest
 {
+    private BoardTest() {}
 
     public static void main (String[] args) {
 
 	Board board = new Board(8, 8);
-	board.setPolyIsFalling(false);
-	board.setPolyType(3);
+	//board.setPolyIsFalling(true);
+	//board.setPolyType(3);
 
 	BoardToTextConverter text = new BoardToTextConverter();
 
         System.out.println(text.convertToText(board));
 
-        for (int i = 0; i < 10; i++) {
+        /*for (int i = 0; i < 8; i++) {
 	    BoardToTextConverter rndText = new BoardToTextConverter();
 	    board.randomBoard();
 	    System.out.println(rndText.convertToText(board));
-	}
+	}*/
     }
 }

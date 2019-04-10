@@ -1,8 +1,11 @@
 package se.liu.ida.gussv907.tddd78.tetris;
 
+/**
+ *
+ */
 public class BoardToTextConverter
 {
-    StringBuilder boardString = new StringBuilder();
+    private StringBuilder boardString = new StringBuilder();
 
     public String convertToText(Board board) {
         for(int width = 0; width < board.getWidth(); width++) {
@@ -35,11 +38,12 @@ public class BoardToTextConverter
 			boardString.append("L");
 			break;
 		    default:
-		        boardString.append("-");
+		        boardString.append("||");
 		}
 	    }
 	    boardString.append("\n");
 	}
         return boardString.toString();
     }
+
 }

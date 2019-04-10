@@ -1,14 +1,17 @@
 package se.liu.ida.gussv907.tddd78.tetris;
 
-
-import java.awt.*;
 import java.util.*;
-import java.util.List;
 
+/**
+ *
+ */
 public class Board
 {
     private SquareType[][] squares;
-    private int width, height;
+    private int width;
+    private int height;
+    private int realWidth;
+    private int realHeight;
     private Random rnd = new Random();
     private int numOfTypes = SquareType.values().length;
 
@@ -18,7 +21,7 @@ public class Board
     private int polyType; //Decides the Poly type
     private Poly falling = null;
 
-    private ArrayList<BoardListener> listeners = new ArrayList<BoardListener>();
+    private List<BoardListener> listeners = new ArrayList<>();
 
 
     public void addBoardListener(BoardListener bl) {
@@ -38,13 +41,13 @@ public class Board
 
     public void movePolyLeft() {
 	polyX -= 1;
-	System.out.println("Lefti");
+	//System.out.println("Lefti");
 	notifyListeners();
     }
 
     public void tick() {
         if (polyIsFalling) {
-	    System.out.println("Hejsan");
+	    //System.out.println("Hejsan");
             polyY += 1;
             notifyListeners();
     	}
@@ -52,30 +55,24 @@ public class Board
             polyX = width / 2;
             polyY = 0;
 	    TetrominoMaker poly = new TetrominoMaker();
-            int rndPoly = rnd.nextInt(poly.getNumberOfTypes());
-	    this.falling = poly.getPoly(rndPoly);
+            polyType = rnd.nextInt(poly.getNumberOfTypes());
+	    this.falling = poly.getPoly(polyType);
 	    setPolyIsFalling(true);
     	}
     }
 
-    public void fallingPoly() {
-	TetrominoMaker poly = new TetrominoMaker();
-        if (polyIsFalling) {
-            this.falling = poly.getPoly(polyType);
-	}
-    }
-
     public SquareType getSquareAt(int x, int y) {
 	/* Takes a position and determines if the square at that position is
-	 * falling or is still. If it is falling it should return at
-	 * SquareType from Poly falling. Otherwise it should return a
-	 * SquareType from Board.
+	 * falling or is still.
 	 */
+	int playX = x;
+	int playY = y;
 
-	//fallingPoly(); //Initiates a falling Poly
+	if (x < width) playX += 2;
+	if (y < height) playY += 2;
 
 	if (!polyIsFalling) {
-	    return squares[x][y];
+	    return squares[playX][playY];
 	}
 	else {
 	    int polyX2 = polyX + falling.getWidth() - 1;
@@ -94,12 +91,14 @@ public class Board
 		//Else if there is no square at that position
 		else {
 		    //System.out.println("board in poly");
+		    //return squares[playX][playY];
 		    return squares[x][y];
 		}
 	    }
 	    //There is no Poly at the position
 	    else {
 		//System.out.println("board");
+		//return squares[playX][playY];
 		return squares[x][y];
 	    }
 	}
@@ -108,13 +107,24 @@ public class Board
     public Board(final int width, final int height) {
 	this.width = width;
 	this.height = height;
-	squares = new SquareType[width][height];
 
-	for (int w = 0; w < width; w++) {
-	    for (int h = 0; h < height; h++) {
-	        squares[w][h] = SquareType.EMPTY;
+	this.realWidth = width + 4;
+	this.realHeight = height + 4;
+
+	squares = new SquareType[realWidth][realHeight];
+
+	for (int row = 0; row < realWidth; row++) {
+	    for (int column = 0; column < realHeight; column++) {
+	        if (row <= 1 || row >= realWidth - 2  ||
+		column <= 1 || column >= realHeight - 1) {
+		    squares[row][column] = SquareType.OUTSIDE;
+		}
+		else {
+		    squares[row][column] = SquareType.EMPTY;
+		}
 	    }
 	}
+
     }
 
     public void randomBoard() {
@@ -135,12 +145,13 @@ public class Board
 	return height;
     }
 
-    public int getPolyX() {
-	return polyX;
-    }
+    public int getRealWidth() {
+	System.out.println(realWidth);
+    	return realWidth;
+        }
 
-    public int getPolyY() {
-	return polyY;
+    public int getRealHeight() {
+        return realHeight;
     }
 
     public void setPolyType(final int polyType) {
@@ -152,10 +163,6 @@ public class Board
    	this.polyIsFalling = polyIsFalling;
    	notifyListeners();
     }
-
-    public void setPolyY(final int polyY) {
-   	this.polyY = polyY;
-       }
 
 
     public static void main(String[] args) {

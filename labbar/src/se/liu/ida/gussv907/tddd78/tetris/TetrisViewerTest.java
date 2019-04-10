@@ -2,16 +2,17 @@ package se.liu.ida.gussv907.tddd78.tetris;
 
 import javax.swing.*;
 
-public class TetrisViewerTest
+/**
+ * Viewer test
+ */
+public final class TetrisViewerTest
 {
 
-    private static int ONE_SECOND = 1000;
-
-    private static Timer clockTimer;
+    private TetrisViewerTest() {}
 
     public static void main(String[] args) {
 
-	Board board = new Board(50, 50);
+	Board board = new Board(20, 27);
 
 	board.setPolyIsFalling(false);
 
@@ -29,7 +30,9 @@ public class TetrisViewerTest
 
 	board.addBoardListener(comp);
 
-	clockTimer = new Timer(ONE_SECOND, game.oneGameStep);
+	final int ONE_SECOND = 1000;
+
+	final Timer clockTimer = new Timer(ONE_SECOND, game.getOneGameStep());
 
 	clockTimer.setCoalesce(true);
 

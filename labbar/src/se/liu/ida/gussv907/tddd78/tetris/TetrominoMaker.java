@@ -1,5 +1,8 @@
 package se.liu.ida.gussv907.tddd78.tetris;
 
+/**
+ *
+ */
 public class TetrominoMaker
 {
     public int getNumberOfTypes() {
@@ -66,7 +69,6 @@ public class TetrominoMaker
     public static Poly polyO() {
 	int size = 2;
 	SquareType[][] oSquare = new SquareType[size][size];
-	emptyBackground(oSquare, size);
 	oSquare[0][0] = SquareType.O;
 	oSquare[0][1] = SquareType.O;
 	oSquare[1][0] = SquareType.O;

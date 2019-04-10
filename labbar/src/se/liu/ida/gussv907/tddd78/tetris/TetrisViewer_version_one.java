@@ -3,7 +3,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 
-public class TetrisViewer_v1
+/**
+ *
+ */
+public class TetrisViewer_version_one
 {
     private final static int ONE_SECOND = 1000;
     private static Timer clockTimer;
@@ -24,7 +27,7 @@ public class TetrisViewer_v1
 
     /* --------------- End for one step in the game --------------- */
 
-    public TetrisViewer_v1(Board board) {
+    public TetrisViewer_version_one(Board board) {
 	//BoardToTextConverter text = new BoardToTextConverter();
 	//JFrame frame = new JFrame("TetrisViewer");
 
@@ -59,7 +62,7 @@ public class TetrisViewer_v1
 
 	Board board = new Board(5, 5);
 
-	TetrisViewer_v1 test = new TetrisViewer_v1(board);
+	TetrisViewer_version_one test = new TetrisViewer_version_one(board);
 
 	clockTimer = new Timer(ONE_SECOND, oneGameStep);
 	clockTimer.setCoalesce(true);

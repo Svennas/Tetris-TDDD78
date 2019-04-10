@@ -4,12 +4,15 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.util.EnumMap;
-import java.awt.Color;
+
+/**
+ * Hello
+ */
 
 public class TetrisComponent extends JComponent implements BoardListener
 {
     private Board board;
-    private final static int SQUARE_PIXEL_SIZE = 20; //Size in pixels
+    private final static int SQUARE_PIXEL_SIZE = 35; //Size in pixels
     private EnumMap<SquareType, Color> colorMap;
 
     public TetrisComponent(final Board board) {
@@ -21,8 +24,8 @@ public class TetrisComponent extends JComponent implements BoardListener
     }
 
     public Dimension getPreferredSize() {
-        int width = SQUARE_PIXEL_SIZE * board.getWidth();
-        int height = SQUARE_PIXEL_SIZE * board.getHeight();
+        int width = SQUARE_PIXEL_SIZE * board.getRealWidth();
+        int height = SQUARE_PIXEL_SIZE * board.getRealHeight();
         return new Dimension(width, height);
     }
 
@@ -32,8 +35,8 @@ public class TetrisComponent extends JComponent implements BoardListener
         super.paintComponent(g);
         final Graphics2D g2d = (Graphics2D) g;
 
-        for (int width = 0; width < board.getWidth(); width++) {
-            for (int height = 0; height < board.getHeight(); height++) {
+        for (int width = 0; width < board.getRealWidth(); width++) {
+            for (int height = 0; height < board.getRealHeight(); height++) {
                 g2d.setColor(getSquareTypeColor(board.getSquareAt(width, height)));
 
                 g2d.fillRect(width * SQUARE_PIXEL_SIZE, height * SQUARE_PIXEL_SIZE,
@@ -43,14 +46,15 @@ public class TetrisComponent extends JComponent implements BoardListener
     }
 
     public void makeSquareTypeColors () {
-        colorMap.put(SquareType.EMPTY, Color.BLACK);
-        colorMap.put(SquareType.I, Color.BLUE);
+        colorMap.put(SquareType.OUTSIDE, Color.BLACK);
+        colorMap.put(SquareType.EMPTY, Color.LIGHT_GRAY);
+        colorMap.put(SquareType.I, Color.CYAN);
         colorMap.put(SquareType.O, Color.RED);
         colorMap.put(SquareType.T, Color.GREEN);
         colorMap.put(SquareType.S, Color.YELLOW);
         colorMap.put(SquareType.Z, Color.MAGENTA);
         colorMap.put(SquareType.J, Color.ORANGE);
-        colorMap.put(SquareType.L, Color.WHITE);
+        colorMap.put(SquareType.L, Color.BLUE);
     }
 
     public Color getSquareTypeColor(SquareType square) {

@@ -2,7 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f9e77a8-344c-4ded-acbb-700623112dfa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/BoardListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/BoardListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/BoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/BoardTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/BoardToTextConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/BoardToTextConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/Poly.java" beforeDir="false" afterPath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/Poly.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/SquareType.java" beforeDir="false" afterPath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/SquareType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrisComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrisComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrisViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrisViewer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrisViewerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrisViewerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrisViewer_v1.java" beforeDir="false" afterPath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrisViewer_version_one.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrominoMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrominoMaker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/labbar/se/liu/ida/gussv907/tddd78/tetris/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/labbar/se/liu/ida/gussv907/tddd78/tetris/Board.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/labbar/se/liu/ida/gussv907/tddd78/tetris/BoardTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/labbar/se/liu/ida/gussv907/tddd78/tetris/BoardTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/labbar/se/liu/ida/gussv907/tddd78/tetris/BoardToTextConverter$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/labbar/se/liu/ida/gussv907/tddd78/tetris/BoardToTextConverter$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/labbar/se/liu/ida/gussv907/tddd78/tetris/BoardToTextConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/labbar/se/liu/ida/gussv907/tddd78/tetris/BoardToTextConverter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/labbar/se/liu/ida/gussv907/tddd78/tetris/Game$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/labbar/se/liu/ida/gussv907/tddd78/tetris/Game$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/labbar/se/liu/ida/gussv907/tddd78/tetris/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/labbar/se/liu/ida/gussv907/tddd78/tetris/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/labbar/se/liu/ida/gussv907/tddd78/tetris/Poly.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/labbar/se/liu/ida/gussv907/tddd78/tetris/Poly.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/labbar/se/liu/ida/gussv907/tddd78/tetris/SquareType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/labbar/se/liu/ida/gussv907/tddd78/tetris/SquareType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/labbar/se/liu/ida/gussv907/tddd78/tetris/TetrisComponent$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/labbar/se/liu/ida/gussv907/tddd78/tetris/TetrisComponent$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/labbar/se/liu/ida/gussv907/tddd78/tetris/TetrisComponent$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/labbar/se/liu/ida/gussv907/tddd78/tetris/TetrisComponent$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/labbar/se/liu/ida/gussv907/tddd78/tetris/TetrisComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/labbar/se/liu/ida/gussv907/tddd78/tetris/TetrisComponent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/labbar/se/liu/ida/gussv907/tddd78/tetris/TetrisViewer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/labbar/se/liu/ida/gussv907/tddd78/tetris/TetrisViewer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/labbar/se/liu/ida/gussv907/tddd78/tetris/TetrisViewerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/labbar/se/liu/ida/gussv907/tddd78/tetris/TetrisViewerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/labbar/se/liu/ida/gussv907/tddd78/tetris/TetrisViewer_v1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/labbar/se/liu/ida/gussv907/tddd78/tetris/TetrisViewer_v1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/labbar/se/liu/ida/gussv907/tddd78/tetris/TetrominoMaker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/labbar/se/liu/ida/gussv907/tddd78/tetris/TetrominoMaker.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,12 +46,21 @@
     <option name="delegatedBuild" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrisViewerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="300">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/BoardListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -29,8 +68,79 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="26" selection-end-column="6" />
+            <state relative-caret-position="90">
+              <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrisViewer_version_one.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="18" column="56" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/SquareType.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrisComponent.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="750">
+              <caret line="50" column="45" selection-start-line="50" selection-start-column="45" selection-end-line="50" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrisViewer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrominoMaker.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-375">
+              <caret line="70" column="60" selection-start-line="70" selection-start-column="60" selection-end-line="70" selection-end-column="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/Board.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="118" column="55" selection-start-line="118" selection-start-column="55" selection-end-line="118" selection-end-column="55" />
+              <folding>
+                <element signature="e#3417#3418#0" expanded="true" />
+                <element signature="e#3438#3439#0" expanded="true" />
+                <element signature="e#3468#3469#0" expanded="true" />
+                <element signature="e#3490#3491#0" expanded="true" />
+                <element signature="e#3622#3623#0" expanded="true" />
+                <element signature="e#3655#3656#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/Poly.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
@@ -40,11 +150,29 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1912" />
-    <option name="y" value="-860" />
-    <option name="width" value="1216" />
-    <option name="height" value="1896" />
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/BoardListener.java" />
+        <option value="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/Game.java" />
+        <option value="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/Poly.java" />
+        <option value="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrisViewer_v1.java" />
+        <option value="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrisViewer_version_one.java" />
+        <option value="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrisViewer.java" />
+        <option value="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrominoMaker.java" />
+        <option value="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/SquareType.java" />
+        <option value="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/BoardToTextConverter.java" />
+        <option value="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/BoardTest.java" />
+        <option value="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrisComponent.java" />
+        <option value="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/Board.java" />
+        <option value="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrisViewerTest.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="4">
+    <option name="y" value="28" />
+    <option name="width" value="960" />
+    <option name="height" value="1144" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -73,14 +201,16 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554906381174" />
+    <property name="run.code.analysis.last.selected.profile" value="aTDDD78-2019-v1" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -94,7 +224,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.TetrisViewerTest">
+    <configuration name="BoardTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="se.liu.ida.gussv907.tddd78.tetris.BoardTest" />
+      <module name="labbar" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="se.liu.ida.gussv907.tddd78.tetris.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TetrisViewerTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="se.liu.ida.gussv907.tddd78.tetris.TetrisViewerTest" />
       <module name="labbar" />
@@ -111,6 +254,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.TetrisViewerTest" />
+        <item itemvalue="Application.BoardTest" />
       </list>
     </recent_temporary>
   </component>
@@ -125,23 +269,26 @@
       <option name="presentableId" value="Default" />
       <updated>1554883532599</updated>
       <workItem from="1554883535285" duration="1359000" />
+      <workItem from="1554896808998" duration="9303000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1359000" />
+    <option name="totallyTimeSpent" value="10662000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-860" width="1216" height="1896" extended-state="6" />
+    <frame x="0" y="28" width="960" height="1144" extended-state="4" />
+    <editor active="true" />
     <layout>
-      <window_info anchor="top" id="Run" order="0" weight="0.18322803" />
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" anchor="top" id="Run" order="0" visible="true" weight="0.18227594" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18421052" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection Results" weight="0.33736154" />
       <window_info anchor="bottom" id="Messages" order="0" />
       <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="2" />
@@ -154,32 +301,110 @@
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="11" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Database" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Maven" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/BoardToTextConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/BoardTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="10" lean-forward="true" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrominoMaker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-375">
+          <caret line="70" column="60" selection-start-line="70" selection-start-column="60" selection-end-line="70" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="26" selection-end-column="6" />
+        <state relative-caret-position="90">
+          <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/BoardListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrisViewer_version_one.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="18" column="56" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/SquareType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrisComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="50" column="45" selection-start-line="50" selection-start-column="45" selection-end-line="50" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrisViewer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/Poly.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="118" column="55" selection-start-line="118" selection-start-column="55" selection-end-line="118" selection-end-column="55" />
+          <folding>
+            <element signature="e#3417#3418#0" expanded="true" />
+            <element signature="e#3438#3439#0" expanded="true" />
+            <element signature="e#3468#3469#0" expanded="true" />
+            <element signature="e#3490#3491#0" expanded="true" />
+            <element signature="e#3622#3623#0" expanded="true" />
+            <element signature="e#3655#3656#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrisViewerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="300">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
