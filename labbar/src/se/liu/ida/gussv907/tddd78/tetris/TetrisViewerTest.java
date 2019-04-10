@@ -11,19 +11,21 @@ public class TetrisViewerTest
 
     public static void main(String[] args) {
 
-	Board board = new Board(10, 10);
+	Board board = new Board(50, 50);
 
 	board.setPolyIsFalling(false);
 
-	board.setPolyType(0);
+	//board.setPolyType(0);
 
 
 
 	TetrisComponent comp = new TetrisComponent(board);
 
-	TetrisViewer test = new TetrisViewer(board, comp);
+	TetrisViewer test = new TetrisViewer(comp);
 
 	Game game = new Game(board, comp, test);
+
+	//Game keypress = new Game();
 
 	board.addBoardListener(comp);
 

@@ -3,7 +3,7 @@ package se.liu.ida.gussv907.tddd78.tetris;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 
-public class Game
+public class Game extends JComponent
 {
     private Board board;
     private TetrisComponent component;
@@ -17,13 +17,12 @@ public class Game
     }
 
 
-    /* ----------------- For one step in the game ----------------- */
+    //For one step in the game
     final Action oneGameStep = new AbstractAction()
     {
 	public void actionPerformed(ActionEvent event) {
-	    viewer.boardUpdater(board, component);
-	    //component.repaint();
+	    board.tick();
+	    viewer.boardUpdater(component);
 	}
     };
-    /* --------------- End for one step in the game --------------- */
 }

@@ -6,18 +6,15 @@ import java.awt.event.ActionEvent;
 public class TetrisViewer
 {
     private JFrame frame;
-    //private TetrisComponent component;
 
-    public TetrisViewer(Board board, TetrisComponent component) {
+
+    public TetrisViewer(TetrisComponent component) {
 	this.frame = new JFrame("TetrisViewer");
-	//this.component = new TetrisComponent(board);
 
-	boardUpdater(board, component);
+	boardUpdater(component);
     }
 
-    public void boardUpdater(Board board, TetrisComponent component) {
-        board.randomBoard();
-        //component.repaint();
+    public void boardUpdater(TetrisComponent component) {
         frame.setLayout(new BorderLayout());
         frame.add(component, BorderLayout.CENTER);
         frame.setSize(component.getPreferredSize());

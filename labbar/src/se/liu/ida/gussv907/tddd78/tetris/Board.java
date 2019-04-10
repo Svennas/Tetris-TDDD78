@@ -13,7 +13,8 @@ public class Board
     private int numOfTypes = SquareType.values().length;
 
     private boolean polyIsFalling;
-    private int polyX, polyY = 0; //Starting position of Poly (left-upper corner)
+    private int polyX;
+    private int polyY; //Starting position of Poly (left-upper corner)
     private int polyType; //Decides the Poly type
     private Poly falling = null;
 
@@ -30,12 +31,30 @@ public class Board
  	}
      }
 
+    public void movePolyRight() {
+        polyX += 1;
+        notifyListeners();
+    }
+
+    public void movePolyLeft() {
+	polyX -= 1;
+	System.out.println("Lefti");
+	notifyListeners();
+    }
+
     public void tick() {
         if (polyIsFalling) {
-            polyY++;
+	    System.out.println("Hejsan");
+            polyY += 1;
+            notifyListeners();
     	}
         else {
-               //add new Poly on Board
+            polyX = width / 2;
+            polyY = 0;
+	    TetrominoMaker poly = new TetrominoMaker();
+            int rndPoly = rnd.nextInt(poly.getNumberOfTypes());
+	    this.falling = poly.getPoly(rndPoly);
+	    setPolyIsFalling(true);
     	}
     }
 
@@ -53,9 +72,9 @@ public class Board
 	 * SquareType from Board.
 	 */
 
-	fallingPoly(); //Initiates a falling Poly
+	//fallingPoly(); //Initiates a falling Poly
 
-	if (falling == null) {
+	if (!polyIsFalling) {
 	    return squares[x][y];
 	}
 	else {
@@ -89,7 +108,6 @@ public class Board
     public Board(final int width, final int height) {
 	this.width = width;
 	this.height = height;
-	this.polyX = (height / 2) - 1;
 	squares = new SquareType[width][height];
 
 	for (int w = 0; w < width; w++) {
@@ -134,6 +152,10 @@ public class Board
    	this.polyIsFalling = polyIsFalling;
    	notifyListeners();
     }
+
+    public void setPolyY(final int polyY) {
+   	this.polyY = polyY;
+       }
 
 
     public static void main(String[] args) {
