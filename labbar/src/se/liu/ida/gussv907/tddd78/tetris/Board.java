@@ -23,6 +23,16 @@ public class Board
 
     private List<BoardListener> listeners = new ArrayList<>();
 
+    public boolean gameOver = false;
+
+    private List<Integer> fullRows = new ArrayList<>();
+
+
+    public final static int PLAYING_BOARD_HEIGHT = 27;
+    public final static int PLAYING_BOARD_WIDTH = 20;
+    public final static int STARTING_POLY_X = 10;
+    public final static int STARTING_POLY_Y = 2;
+
 
     public void addBoardListener(BoardListener bl) {
           listeners.add(bl);
@@ -31,34 +41,146 @@ public class Board
     private void notifyListeners() {
          for (BoardListener listElement : listeners) {
              listElement.boardChanged();
- 	}
-     }
+ 	 }
+    }
+
+    public void deleteRows() {
+
+
+	for (Integer boardRow : fullRows) {
+	    int row = boardRow;
+	    System.out.println(boardRow);
+
+	    while (row >= 2)
+	    {
+		System.out.println(row);
+
+		for (int column = 2; column < realWidth - 1; column++)
+		{
+		    if(row == 2) {
+		        squares[column][row] = SquareType.EMPTY;
+		    }
+		    else {
+			squares[column][row] = squares[column][row - 1];
+		    }
+		}
+		row--;
+	    }
+
+	}
+	fullRows.clear();
+    }
+
+    public void checkFullRows() {
+
+	int polyCounter = 0;
+
+	for (int row = 2; row < realHeight - 1; row++) {
+	    for (int column = 2; column < realWidth - 1; column++) {
+		if (squares[column][row] != SquareType.EMPTY && squares[column][row] != SquareType.OUTSIDE) {
+		    polyCounter++;
+
+		    if (polyCounter == PLAYING_BOARD_WIDTH) {
+			fullRows.add(row);
+		    }
+		    if (column == realWidth - 1) {
+			polyCounter = 0;
+		    }
+		}
+	    }
+	}
+    }
+
+    public void rotate(boolean right) { //false for left, true for right
+
+	int size = falling.getWidth();
+	Poly rotated = new Poly(new SquareType[size][size]);
+
+	for (int row = 0; row < size; row++) {
+	    for (int column = 0; column < size; column++) {
+		if (right) {
+		    rotated.getPolySquares()[size - 1 - row][column] = this.falling.getPolySquares()[column][row];
+		}
+		else {
+		    rotated.getPolySquares()[row][size - 1 - column] = this.falling.getPolySquares()[column][row];
+		}
+	    }
+	}
+	if (!(hasCollision(polyX, polyY, rotated))) {
+	    this.falling = rotated;
+	}
+    }
 
     public void movePolyRight() {
-        polyX += 1;
-        notifyListeners();
+        if (!(hasCollision(polyX + 1, polyY, falling))) {
+	    polyX += 1;
+	    notifyListeners();
+	}
     }
 
     public void movePolyLeft() {
-	polyX -= 1;
-	//System.out.println("Lefti");
-	notifyListeners();
+	if (!(hasCollision(polyX - 1, polyY, falling))) {
+	    polyX -= 1;
+	    notifyListeners();
+	}
     }
 
     public void tick() {
+        //Delete row if list is not empty
+
+	checkFullRows();
+
+	if (!(fullRows.isEmpty())) {
+	    deleteRows();
+	}
+
+
+
         if (polyIsFalling) {
-	    //System.out.println("Hejsan");
-            polyY += 1;
-            notifyListeners();
+	    if (!(hasCollision(polyX, polyY + 1, falling))) {
+	        polyY += 1;
+	        notifyListeners();
+	    }
+	    else {
+		for (int polyRow = 0; polyRow < falling.getWidth(); polyRow++){
+		    for (int polyColumn = 0; polyColumn < falling.getHeight(); polyColumn++) {
+		        if (falling.getPolySquares()[polyRow][polyColumn] != SquareType.EMPTY)
+		            squares[polyX + polyRow][polyY + polyColumn] = falling.getPolySquares()[polyRow][polyColumn];
+		    }
+		}
+		falling = null;
+		polyIsFalling = false;
+
+	    }
     	}
         else {
-            polyX = width / 2;
-            polyY = 0;
-	    TetrominoMaker poly = new TetrominoMaker();
-            polyType = rnd.nextInt(poly.getNumberOfTypes());
-	    this.falling = poly.getPoly(polyType);
-	    setPolyIsFalling(true);
+            if (squares[STARTING_POLY_X + 1][STARTING_POLY_Y] != SquareType.EMPTY) {
+		gameOver = true;
+	    }
+            else {
+		polyX = STARTING_POLY_X;
+		polyY = STARTING_POLY_Y;
+		TetrominoMaker poly = new TetrominoMaker();
+		polyType = rnd.nextInt(poly.getNumberOfTypes());
+		//test
+		setPolyType(0);
+		//
+		this.falling = poly.getPoly(polyType);
+		setPolyIsFalling(true);
+	    }
     	}
+    }
+
+    public boolean hasCollision(int newPolyX, int newPolyY, Poly poly) {
+        for (int polyRow = 0; polyRow < poly.getWidth(); polyRow++){
+            for (int polyColumn = 0; polyColumn < poly.getHeight(); polyColumn++) {
+		if (poly.getPolySquares()[polyRow][polyColumn] != SquareType.EMPTY &&
+		       squares[newPolyX + polyRow][newPolyY + polyColumn] != SquareType.EMPTY) {
+		    return true;
+		}
+	    }
+	}
+        return false;
     }
 
     public SquareType getSquareAt(int x, int y) {
@@ -115,7 +237,7 @@ public class Board
 
 	for (int row = 0; row < realWidth; row++) {
 	    for (int column = 0; column < realHeight; column++) {
-	        if (row <= 1 || row >= realWidth - 2  ||
+	        if (row <= 1 || row >= realWidth - 1  ||
 		column <= 1 || column >= realHeight - 1) {
 		    squares[row][column] = SquareType.OUTSIDE;
 		}
@@ -146,11 +268,12 @@ public class Board
     }
 
     public int getRealWidth() {
-	System.out.println(realWidth);
+	//System.out.println(realWidth);
     	return realWidth;
         }
 
     public int getRealHeight() {
+	//System.out.println(realHeight);
         return realHeight;
     }
 

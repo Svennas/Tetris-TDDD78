@@ -24,8 +24,8 @@ public class TetrisComponent extends JComponent implements BoardListener
     }
 
     public Dimension getPreferredSize() {
-        int width = SQUARE_PIXEL_SIZE * board.getRealWidth();
-        int height = SQUARE_PIXEL_SIZE * board.getRealHeight();
+        int width = SQUARE_PIXEL_SIZE * (board.getRealWidth() + 1);
+        int height = SQUARE_PIXEL_SIZE * (board.getRealHeight() + 2);
         return new Dimension(width, height);
     }
 
@@ -72,8 +72,16 @@ public class TetrisComponent extends JComponent implements BoardListener
         this.getActionMap().put("left", moveLeft);
 
         this.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke("RIGHT"),
-                                                                        "right");
+                                                                "right");
         this.getActionMap().put("right", moveRight);
+
+        this.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke("UP"),
+                                                                "rotate_right");
+        this.getActionMap().put("rotate_right", rotateRight);
+
+        this.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke("DOWN"),
+                                                                "rotate_left");
+        this.getActionMap().put("rotate_left", rotateLeft);
     }
 
     private final Action moveLeft = new AbstractAction() {
@@ -87,4 +95,16 @@ public class TetrisComponent extends JComponent implements BoardListener
             board.movePolyRight();
         }
     };
+
+    private final Action rotateRight = new AbstractAction() {
+                    @Override public void actionPerformed(final ActionEvent e) {
+                        board.rotate(true);
+                    }
+                };
+
+    private final Action rotateLeft = new AbstractAction() {
+                @Override public void actionPerformed(final ActionEvent e) {
+                    board.rotate(false);
+                }
+            };
 }

@@ -24,8 +24,13 @@ public class Game extends JComponent
     private final Action oneGameStep = new AbstractAction()
     {
 	public void actionPerformed(ActionEvent event) {
-	    board.tick();
-	    viewer.boardUpdater(component);
+	    if (board.gameOver) {
+		viewer.gameOverWindow();
+	    }
+	    else {
+		board.tick();
+		viewer.boardUpdater(component);
+	    }
 	}
     };
 

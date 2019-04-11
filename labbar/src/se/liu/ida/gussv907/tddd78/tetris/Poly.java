@@ -10,7 +10,7 @@ public class Poly
 
     public Poly(final SquareType[][] polySquares) {
 	this.polySquares = polySquares;
-	this.width = polySquares[0].length;
+	this.width = polySquares[1].length;
 	this.height = polySquares.length;
     }
 

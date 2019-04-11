@@ -23,4 +23,9 @@ public class TetrisViewer
         frame.setSize(component.getPreferredSize());
         frame.setVisible(true);
     }
+
+    public void gameOverWindow() {
+	JOptionPane.showMessageDialog(frame,
+	    "You lost the game!", "GAMEOVER!", JOptionPane.ERROR_MESSAGE);
+    }
 }

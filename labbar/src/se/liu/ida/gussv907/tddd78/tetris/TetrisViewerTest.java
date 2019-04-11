@@ -30,7 +30,7 @@ public final class TetrisViewerTest
 
 	board.addBoardListener(comp);
 
-	final int ONE_SECOND = 1000;
+	final int ONE_SECOND = 200;
 
 	final Timer clockTimer = new Timer(ONE_SECOND, game.getOneGameStep());
 

@@ -6,7 +6,7 @@ package se.liu.ida.gussv907.tddd78.tetris;
 public class TetrominoMaker
 {
     public int getNumberOfTypes() {
-        return SquareType.values().length - 1;
+        return SquareType.values().length - 2;
     }
 
     public Poly getPoly(int typeNum) {
@@ -59,10 +59,10 @@ public class TetrominoMaker
         int size = 4;
         SquareType[][] iSquare = new SquareType[size][size];
 	emptyBackground(iSquare, size);
-        iSquare[0][1] = SquareType.I;
+        iSquare[1][0] = SquareType.I;
 	iSquare[1][1] = SquareType.I;
-	iSquare[2][1] = SquareType.I;
-	iSquare[3][1] = SquareType.I;
+	iSquare[1][2] = SquareType.I;
+	iSquare[1][3] = SquareType.I;
         return new Poly(iSquare);
     }
 
@@ -80,10 +80,10 @@ public class TetrominoMaker
         int size = 3;
         SquareType[][] tSquare = new SquareType[size][size];
 	emptyBackground(tSquare, size);
-	tSquare[0][1] = SquareType.T;
+	tSquare[0][0] = SquareType.T;
 	tSquare[1][0] = SquareType.T;
 	tSquare[1][1] = SquareType.T;
-	tSquare[1][2] = SquareType.T;
+	tSquare[2][0] = SquareType.T;
 	return new Poly(tSquare);
     }
 
@@ -92,9 +92,9 @@ public class TetrominoMaker
         SquareType[][] sSquare = new SquareType[size][size];
 	emptyBackground(sSquare, size);
         sSquare[0][1] = SquareType.S;
-	sSquare[0][2] = SquareType.S;
 	sSquare[1][0] = SquareType.S;
 	sSquare[1][1] = SquareType.S;
+	sSquare[2][0] = SquareType.S;
     	return new Poly(sSquare);
     }
 
@@ -103,9 +103,9 @@ public class TetrominoMaker
         SquareType[][] zSquare = new SquareType[size][size];
 	emptyBackground(zSquare, size);
     	zSquare[0][0] = SquareType.Z;
-	zSquare[0][1] = SquareType.Z;
+	zSquare[1][0] = SquareType.Z;
 	zSquare[1][1] = SquareType.Z;
-	zSquare[1][2] = SquareType.Z;
+	zSquare[2][1] = SquareType.Z;
     	return new Poly(zSquare);
     }
 
@@ -113,10 +113,10 @@ public class TetrominoMaker
         int size = 3;
         SquareType[][] jSquare = new SquareType[size][size];
 	emptyBackground(jSquare, size);
-        jSquare[0][1] = SquareType.J;
-	jSquare[1][1] = SquareType.J;
-	jSquare[2][0] = SquareType.J;
-	jSquare[2][1] = SquareType.J;
+        jSquare[1][0] = SquareType.J;	// E J E
+	jSquare[1][1] = SquareType.J;	// E J E  / Shape of Poly J
+	jSquare[1][2] = SquareType.J; 	// J J E
+	jSquare[0][2] = SquareType.J;
     	return new Poly(jSquare);
     }
 
@@ -124,9 +124,9 @@ public class TetrominoMaker
         int size = 3;
         SquareType[][] lSquare = new SquareType[size][size];
 	emptyBackground(lSquare, size);
-        lSquare[0][1] = SquareType.L;
+        lSquare[1][0] = SquareType.L;
 	lSquare[1][1] = SquareType.L;
-	lSquare[2][1] = SquareType.L;
+	lSquare[1][2] = SquareType.L;
 	lSquare[2][2] = SquareType.L;
     	return new Poly(lSquare);
     }
