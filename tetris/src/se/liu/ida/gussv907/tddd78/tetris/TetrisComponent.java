@@ -12,7 +12,7 @@ import java.util.EnumMap;
 public class TetrisComponent extends JComponent implements BoardListener
 {
     private Board board;
-    private final static int SQUARE_PIXEL_SIZE = 35; //Size in pixels
+    private final static int SQUARE_PIXEL_SIZE = 30; //Size in pixels
     private EnumMap<SquareType, Color> colorMap;
 
     public TetrisComponent(final Board board) {
@@ -24,7 +24,7 @@ public class TetrisComponent extends JComponent implements BoardListener
     }
 
     public Dimension getPreferredSize() {
-        int width = SQUARE_PIXEL_SIZE * (board.getRealWidth() + 1);
+        int width = SQUARE_PIXEL_SIZE * (board.getBoardWidth() + 1);
         int height = SQUARE_PIXEL_SIZE * (board.getRealHeight() + 2);
         return new Dimension(width, height);
     }
@@ -35,7 +35,7 @@ public class TetrisComponent extends JComponent implements BoardListener
         super.paintComponent(g);
         final Graphics2D g2d = (Graphics2D) g;
 
-        for (int width = 0; width < board.getRealWidth(); width++) {
+        for (int width = 0; width < board.getBoardWidth(); width++) {
             for (int height = 0; height < board.getRealHeight(); height++) {
                 g2d.setColor(getSquareTypeColor(board.getSquareAt(width, height)));
 

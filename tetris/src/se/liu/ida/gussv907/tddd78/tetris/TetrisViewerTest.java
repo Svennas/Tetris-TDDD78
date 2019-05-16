@@ -12,7 +12,7 @@ public final class TetrisViewerTest
 
     public static void main(String[] args) {
 
-	Board board = new Board(20, 27);
+	Board board = new Board();
 
 	board.setPolyIsFalling(false);
 

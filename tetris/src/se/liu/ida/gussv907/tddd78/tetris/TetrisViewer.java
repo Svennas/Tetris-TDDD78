@@ -18,9 +18,16 @@ public class TetrisViewer
     }
 
     public void boardUpdater(TetrisComponent component) {
+        Toolkit tk = Toolkit.getDefaultToolkit();
+        Dimension screenSize = tk.getScreenSize();
+        int screenHeight = screenSize.height;
+        int screenWidth = screenSize.width;
+
         frame.setLayout(new BorderLayout());
         frame.add(component, BorderLayout.CENTER);
         frame.setSize(component.getPreferredSize());
+        //frame.setLocation(screenWidth / 3, screenHeight / 3);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setVisible(true);
     }
 

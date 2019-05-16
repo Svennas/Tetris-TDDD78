@@ -17,7 +17,7 @@ public class TetrisViewer_version_one
     final static Action oneGameStep = new AbstractAction()
     {
 	public void actionPerformed(ActionEvent event) {
-	    Board board = new Board(5, 5);
+	    Board board = new Board();
 	    board.randomBoard();
 	    JTextArea textarea = new JTextArea(board.getWidth(), board.getHeight());
 	    JFrameUpdater(board, frame);
@@ -60,7 +60,7 @@ public class TetrisViewer_version_one
 
     public static void main(String[] args) {
 
-	Board board = new Board(5, 5);
+	Board board = new Board();
 
 	TetrisViewer_version_one test = new TetrisViewer_version_one(board);
 

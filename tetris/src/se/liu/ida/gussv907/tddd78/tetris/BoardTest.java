@@ -9,7 +9,7 @@ public final class BoardTest
 
     public static void main (String[] args) {
 
-	Board board = new Board(8, 8);
+	Board board = new Board();
 	//board.setPolyIsFalling(true);
 	//board.setPolyType(3);
 
