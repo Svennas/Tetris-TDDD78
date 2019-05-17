@@ -12,6 +12,9 @@ public class Game extends JComponent
     private TetrisComponent component;
     private TetrisViewer viewer;
 
+    private final static int ONE_SECOND = 400;
+
+
     public Game(Board board, TetrisComponent component, TetrisViewer viewer)
     {
 	this.board = board;
@@ -29,12 +32,24 @@ public class Game extends JComponent
 	    }
 	    else {
 		board.tick();
-		viewer.boardUpdater(component);
 	    }
 	}
     };
 
-    public Action getOneGameStep() {
-	return oneGameStep;
+    public static void main(String[] args) {
+
+	Board gameBoard = new Board();
+	TetrisComponent tetrisComponent = new TetrisComponent(gameBoard);
+	TetrisViewer tetrisViewer = new TetrisViewer(tetrisComponent);
+	Game tetrisGame = new Game(gameBoard, tetrisComponent, tetrisViewer);
+
+	gameBoard.addBoardListener(tetrisComponent);
+
+	final Timer clockTimer = new Timer(ONE_SECOND, tetrisGame.oneGameStep);
+	clockTimer.setCoalesce(true);
+	clockTimer.start();
+
     }
 }
+
+

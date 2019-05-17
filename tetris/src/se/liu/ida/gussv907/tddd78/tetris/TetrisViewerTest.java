@@ -11,7 +11,7 @@ public final class TetrisViewerTest
     private TetrisViewerTest() {}
 
     public static void main(String[] args) {
-
+/*
 	Board board = new Board();
 
 	board.setPolyIsFalling(false);
@@ -40,5 +40,6 @@ public final class TetrisViewerTest
 
 	//clockTimer.stop();
 
+    }*/
     }
 }

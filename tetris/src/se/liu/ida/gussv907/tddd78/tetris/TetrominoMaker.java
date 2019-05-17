@@ -55,6 +55,13 @@ public class TetrominoMaker
 	}
     }
 
+    /** Creates the tetris block I:
+     * 	E I E E
+     * 	E E E E
+     *	E I E E
+     * 	E I E E
+     * with the size 4x4.
+     * */
     public static Poly polyI() {
         int size = 4;
         SquareType[][] iSquare = new SquareType[size][size];
@@ -66,6 +73,11 @@ public class TetrominoMaker
         return new Poly(iSquare);
     }
 
+    /** Creates the tetris block O:
+     * 	O O
+     * 	O O
+     * with the size 2x2.
+     * */
     public static Poly polyO() {
 	int size = 2;
 	SquareType[][] oSquare = new SquareType[size][size];
@@ -76,6 +88,11 @@ public class TetrominoMaker
 	return new Poly(oSquare);
     }
 
+    /** Creates the tetris block T:
+     * 	E S S
+     * 	E S E
+     *	S S E
+     * with the size 3x3. */
     public static Poly polyT() {
         int size = 3;
         SquareType[][] tSquare = new SquareType[size][size];
@@ -87,6 +104,11 @@ public class TetrominoMaker
 	return new Poly(tSquare);
     }
 
+    /** Creates the tetris block S:
+     * 	E S S
+     * 	E S E
+     *	S S E
+     * with the size 3x3. */
     public static Poly polyS() {
         int size = 3;
         SquareType[][] sSquare = new SquareType[size][size];
@@ -98,6 +120,11 @@ public class TetrominoMaker
     	return new Poly(sSquare);
     }
 
+    /** Creates the tetris block Z:
+     * 	Z Z E
+     * 	E Z E
+     *	E Z Z
+     * with the size 3x3. */
     public static Poly polyZ() {
         int size = 3;
         SquareType[][] zSquare = new SquareType[size][size];
@@ -109,17 +136,27 @@ public class TetrominoMaker
     	return new Poly(zSquare);
     }
 
+    /** Creates the tetris block J:
+     * 	E J E
+     * 	E J E
+     *	J J E
+     * with the size 3x3. */
     public static Poly polyJ() {
         int size = 3;
         SquareType[][] jSquare = new SquareType[size][size];
 	emptyBackground(jSquare, size);
-        jSquare[1][0] = SquareType.J;	// E J E
-	jSquare[1][1] = SquareType.J;	// E J E  / Shape of Poly J
-	jSquare[1][2] = SquareType.J; 	// J J E
+        jSquare[1][0] = SquareType.J;
+        jSquare[1][1] = SquareType.J;
+	jSquare[1][2] = SquareType.J;
 	jSquare[0][2] = SquareType.J;
     	return new Poly(jSquare);
     }
 
+    /** Creates the tetris block L:
+     *	E L E
+     *	E L E
+     *	E L L
+     * with the size 3x3. */
     public static Poly polyL() {
         int size = 3;
         SquareType[][] lSquare = new SquareType[size][size];

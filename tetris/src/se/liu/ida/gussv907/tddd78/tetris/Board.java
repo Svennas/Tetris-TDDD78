@@ -203,9 +203,6 @@ public class Board
 		polyY = STARTING_POLY_Y;
 		TetrominoMaker poly = new TetrominoMaker();
 		polyType = rnd.nextInt(poly.getNumberOfTypes());
-		//test
-		setPolyType(1);
-		//
 		this.falling = poly.getPoly(polyType);
 		setPolyIsFalling(true);
 	    }
