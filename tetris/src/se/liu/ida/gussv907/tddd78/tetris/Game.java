@@ -4,7 +4,8 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 
 /**
- *
+ * This class starts the tetris game. Every function that needs to happen needs to be called
+ * from this class.
  */
 public class Game extends JComponent
 {
@@ -23,7 +24,9 @@ public class Game extends JComponent
     }
 
 
-    //For one step in the game
+    /** This Action handles one step in the game. What happens at every step of the game
+     * is defined in the class Board, function tick(). If the game is over, the
+     * game over window will be showed. */
     private final Action oneGameStep = new AbstractAction()
     {
 	public void actionPerformed(ActionEvent event) {
@@ -36,6 +39,8 @@ public class Game extends JComponent
 	}
     };
 
+    /** This main function starts the game. It creates all the objects that needs to be created
+     * and also creates a Timer that makes the game move forward. */
     public static void main(String[] args) {
 
 	Board gameBoard = new Board();
@@ -44,6 +49,7 @@ public class Game extends JComponent
 	Game tetrisGame = new Game(gameBoard, tetrisComponent, tetrisViewer);
 
 	gameBoard.addBoardListener(tetrisComponent);
+
 
 	final Timer clockTimer = new Timer(ONE_SECOND, tetrisGame.oneGameStep);
 	clockTimer.setCoalesce(true);

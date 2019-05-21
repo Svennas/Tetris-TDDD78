@@ -87,15 +87,28 @@ public class Board
  	 }
     }
 
-    /** Takes the row to be deleted as argument and then loops through that row,
-     * making all tetris blocks to empty blocks. */
-    public void deleteRows(int rowToDelete) {
+    /** Takes the rows to be deleted as argument and then loops through those rows,
+     * making all tetris blocks to empty blocks. After making them empty,
+     * the rows above are moved down to fill the empty rows. */
+    public void deleteRows(List<Integer> rowsToDelete) {
 
-        for (int column = 0; column < boardWidth; column++) {
-            if (squares[column][rowToDelete] != SquareType.EMPTY &&
-		squares[column][rowToDelete] != SquareType.OUTSIDE)
-            {
-		squares[column][rowToDelete] = SquareType.EMPTY;
+        int amountOfRows = rowsToDelete.size() - 1;
+
+        for (Integer row : rowsToDelete) {
+	    for (int column = 0; column < boardWidth; column++) {
+	        if (squares[column][row] != SquareType.EMPTY &&
+		    squares[column][row] != SquareType.OUTSIDE)
+	        {
+	            squares[column][row] = SquareType.EMPTY;
+	        }
+	    }
+	}
+
+	//Moves down the rows above the delete ones.
+	//Does not work...
+	for (int column = 0; column < boardWidth; column++) {
+	    for (int row = rowsToDelete.get(amountOfRows); row >= 2; row--) {
+	        squares[column][row] = squares[column][row - amountOfRows];
 	    }
 	}
     }
@@ -105,6 +118,8 @@ public class Board
     public void checkFullRows() {
 
 	int polyCounter = 0; // Keeps count how many poly's there is in a row.
+
+	List<Integer> rowsToDelete = new ArrayList<>();
 
 	for (int column = 0; column < realHeight; column++) {
 	    //System.out.println(row);
@@ -116,11 +131,16 @@ public class Board
 		    polyCounter++;
 
 		    if (polyCounter == PLAYING_BOARD_WIDTH) {
-			deleteRows(column);
+			//deleteRows(column);
+			rowsToDelete.add(Integer.valueOf(column));
 		    }
 		}
 	    }
 	}
+	if (!rowsToDelete.isEmpty()) {
+	    deleteRows(rowsToDelete);
+	}
+
     }
 
     /** Function that rotates the falling poly. If the argument right is true,
@@ -210,6 +230,9 @@ public class Board
     }
 
     public boolean hasCollision(int newPolyX, int newPolyY, Poly poly) {
+        if (poly == null) {
+            return false;
+	}
         for (int polyCol = 0; polyCol < poly.getWidth(); polyCol++){
             for (int polyRow = 0; polyRow < poly.getHeight(); polyRow++) {
 		if (poly.getPolySquares()[polyCol][polyRow] != SquareType.EMPTY &&
