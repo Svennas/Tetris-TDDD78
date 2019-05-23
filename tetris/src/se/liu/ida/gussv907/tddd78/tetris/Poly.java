@@ -1,7 +1,7 @@
 package se.liu.ida.gussv907.tddd78.tetris;
 
 /**
- *
+ * This class defines a poly. A poly is what falls through the board.
  */
 public class Poly
 {

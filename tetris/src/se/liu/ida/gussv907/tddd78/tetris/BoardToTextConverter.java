@@ -1,7 +1,8 @@
 package se.liu.ida.gussv907.tddd78.tetris;
 
 /**
- *
+ * This class converts the squaretypes on a board to string. It is not used in the actual game
+ * but rather during the earlier stages of the project.
  */
 public class BoardToTextConverter
 {
@@ -45,5 +46,4 @@ public class BoardToTextConverter
 	}
         return boardString.toString();
     }
-
 }

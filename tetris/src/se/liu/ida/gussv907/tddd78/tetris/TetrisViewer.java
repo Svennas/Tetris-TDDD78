@@ -64,7 +64,9 @@ public class TetrisViewer
     }
 
     public void gameOverWindow() {
-	JOptionPane.showMessageDialog(frame,
+        JOptionPane option = new JOptionPane();
+        option.setFont(new Font("Arial", Font.PLAIN, MENU_FONT_SIZE));
+	option.showMessageDialog(frame,
 	    "You lost the game!", "GAMEOVER!", JOptionPane.ERROR_MESSAGE);
     }
 

@@ -1,7 +1,7 @@
 package se.liu.ida.gussv907.tddd78.tetris;
 
 /**
- * Test the Board
+ * Tests the Board (from early in the project).
  */
 public final class BoardTest
 {

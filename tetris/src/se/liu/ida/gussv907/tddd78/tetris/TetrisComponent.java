@@ -37,6 +37,7 @@ public class TetrisComponent extends JComponent implements BoardListener
 
         for (int width = 0; width < board.getBoardWidth(); width++) {
             for (int height = 0; height < board.getRealHeight(); height++) {
+
                 g2d.setColor(getSquareTypeColor(board.getSquareAt(width, height)));
 
                 g2d.fillRect(width * SQUARE_PIXEL_SIZE, height * SQUARE_PIXEL_SIZE,

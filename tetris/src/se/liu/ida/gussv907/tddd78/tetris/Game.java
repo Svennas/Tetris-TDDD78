@@ -13,7 +13,7 @@ public class Game extends JComponent
     private TetrisComponent component;
     private TetrisViewer viewer;
 
-    private final static int ONE_SECOND = 400;
+    private final static int ONE_SECOND = 200;
 
 
     public Game(Board board, TetrisComponent component, TetrisViewer viewer)

@@ -92,7 +92,7 @@ public class Board
      * the rows above are moved down to fill the empty rows. */
     public void deleteRows(List<Integer> rowsToDelete) {
 
-        int amountOfRows = rowsToDelete.size() - 1;
+        int amountOfRows = rowsToDelete.size();
 
         for (Integer row : rowsToDelete) {
 	    for (int column = 0; column < boardWidth; column++) {
@@ -106,11 +106,17 @@ public class Board
 
 	//Moves down the rows above the delete ones.
 	//Does not work...
+	for (int row = rowsToDelete.get(amountOfRows - 1); row >= 2 + amountOfRows; row--) {
+	    for (int column = 0; column < boardWidth; column++) {
+	        squares[column][row] = squares[column][row - amountOfRows];
+	    }
+	}
+	/*
 	for (int column = 0; column < boardWidth; column++) {
 	    for (int row = rowsToDelete.get(amountOfRows); row >= 2; row--) {
 	        squares[column][row] = squares[column][row - amountOfRows];
 	    }
-	}
+	}*/
     }
 
     /** Checks if a row on board is full with poly's. If the row is full that row
