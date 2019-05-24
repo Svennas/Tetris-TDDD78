@@ -3,7 +3,7 @@ package se.liu.ida.gussv907.tddd78.tetris;
 import javax.swing.*;
 
 /**
- * Viewer test
+ * Viewer test class from early in the project. It is not used anymore.
  */
 public final class TetrisViewerTest
 {
@@ -11,7 +11,7 @@ public final class TetrisViewerTest
     private TetrisViewerTest() {}
 
     public static void main(String[] args) {
-/*
+
 	Board board = new Board();
 
 	board.setPolyIsFalling(false);
@@ -22,17 +22,17 @@ public final class TetrisViewerTest
 
 	TetrisComponent comp = new TetrisComponent(board);
 
-	TetrisViewer test = new TetrisViewer(comp);
+	TetrisViewer test = new TetrisViewer(comp, board);
 
-	Game game = new Game(board, comp, test);
+	Game game = new Game(board, test);
 
 	//Game keypress = new Game();
 
 	board.addBoardListener(comp);
 
-	final int ONE_SECOND = 200;
+	final int gameSpeed = 200;
 
-	final Timer clockTimer = new Timer(ONE_SECOND, game.getOneGameStep());
+	final Timer clockTimer = new Timer(gameSpeed, game.getOneGameStep());
 
 	clockTimer.setCoalesce(true);
 
@@ -40,6 +40,6 @@ public final class TetrisViewerTest
 
 	//clockTimer.stop();
 
-    }*/
     }
 }
+

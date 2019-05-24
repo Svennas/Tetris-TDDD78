@@ -10,16 +10,14 @@ import java.awt.event.ActionEvent;
 public class Game extends JComponent
 {
     private Board board;
-    private TetrisComponent component;
     private TetrisViewer viewer;
 
-    private final static int ONE_SECOND = 200;
+    private final static int GAME_SPEED = 500;
 
 
-    public Game(Board board, TetrisComponent component, TetrisViewer viewer)
+    public Game(Board board, TetrisViewer viewer)
     {
 	this.board = board;
-	this.component = component;
 	this.viewer = viewer;
     }
 
@@ -33,11 +31,16 @@ public class Game extends JComponent
 	    if (board.gameOver) {
 		viewer.gameOverWindow();
 	    }
-	    else {
+	    if (!board.paused) {
 		board.tick();
 	    }
 	}
-    };
+       };
+
+
+    public Action getOneGameStep() {
+	return oneGameStep;
+    }
 
     /** This main function starts the game. It creates all the objects that needs to be created
      * and also creates a Timer that makes the game move forward. */
@@ -45,13 +48,13 @@ public class Game extends JComponent
 
 	Board gameBoard = new Board();
 	TetrisComponent tetrisComponent = new TetrisComponent(gameBoard);
-	TetrisViewer tetrisViewer = new TetrisViewer(tetrisComponent);
-	Game tetrisGame = new Game(gameBoard, tetrisComponent, tetrisViewer);
+	TetrisViewer tetrisViewer = new TetrisViewer(tetrisComponent, gameBoard);
+	Game tetrisGame = new Game(gameBoard, tetrisViewer);
 
 	gameBoard.addBoardListener(tetrisComponent);
 
 
-	final Timer clockTimer = new Timer(ONE_SECOND, tetrisGame.oneGameStep);
+	final Timer clockTimer = new Timer(GAME_SPEED, tetrisGame.oneGameStep);
 	clockTimer.setCoalesce(true);
 	clockTimer.start();
 

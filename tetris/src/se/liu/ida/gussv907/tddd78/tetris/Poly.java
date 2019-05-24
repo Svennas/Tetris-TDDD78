@@ -1,29 +1,25 @@
 package se.liu.ida.gussv907.tddd78.tetris;
 
 /**
- * This class defines a poly. A poly is what falls through the board.
+ * This class defines a poly. A poly is what falls through the board and is made up
+ * by multiple SquareTypes to make a tetris block.
  */
 public class Poly
 {
     private SquareType[][] polySquares;
-    private int width, height;
+    private int size;
 
     public Poly(final SquareType[][] polySquares) {
 	this.polySquares = polySquares;
-	this.width = polySquares[1].length;
-	this.height = polySquares.length;
+	this.size = polySquares.length;
     }
 
     public SquareType[][] getPolySquares() {
 	return polySquares;
     }
 
-    public int getWidth() {
-	return width;
-    }
-
-    public int getHeight() {
-	return height;
+    public int getSize() {
+	return size;
     }
 }
 

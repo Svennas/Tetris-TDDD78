@@ -12,7 +12,7 @@ public class Board
 {
     private SquareType[][] squares;
     private int boardWidth;
-    private int realHeight;
+    private int boardHeight;
     private Random rnd = new Random();
     private int numOfTypes = SquareType.values().length;
 
@@ -20,7 +20,7 @@ public class Board
     private int polyX;
     private int polyY;
     private int polyType;
-    private Poly falling = null;
+    private Poly falling;
 
     /** List of Boardlistener. This list is notified if something on the board has been
      * changed, which results in the board being repainted. */
@@ -28,13 +28,15 @@ public class Board
 
     /** Public boolean that can tell all classes with a board field that the game is over.*/
     public boolean gameOver = false;
+    /** Public boolean that can tell all classes with a board that the game is paused. */
+    public boolean paused = false;
 
     /** Sets the height of the playable board.*/
     public final static int PLAYING_BOARD_HEIGHT = 20; //Sets the height of the
     /** Sets the width of the playable board. */
     public final static int PLAYING_BOARD_WIDTH = 10;
     /** Sets the starting position X for the falling.  */
-    public final static int STARTING_POLY_X = PLAYING_BOARD_WIDTH / 2;
+    public final static int STARTING_POLY_X = PLAYING_BOARD_WIDTH / 2 + 1;
     /** Sets the starting position Y for the falling. */
     public final static int STARTING_POLY_Y = 2;
 
@@ -57,20 +59,14 @@ public class Board
      * */
     public Board() {
    	this.boardWidth = PLAYING_BOARD_WIDTH + 4;
-   	this.realHeight = PLAYING_BOARD_HEIGHT + 4;
+   	this.boardHeight = PLAYING_BOARD_HEIGHT + 4;
+   	this.falling = new TetrominoMaker().emptyPoly();
 
-   	squares = new SquareType[boardWidth][realHeight];
+   	squares = new SquareType[boardWidth][boardHeight];
 
-   	for (int column = 0; column < boardWidth; column++) {
-   	    for (int row = 0; row < realHeight; row++) {
-   	        if (column <= 1 || column >= PLAYING_BOARD_WIDTH + 2 ||
-   		row <= 1 || row >= PLAYING_BOARD_HEIGHT + 2) {
-   		    squares[column][row] = SquareType.OUTSIDE;
-   		} else {
-   		    squares[column][row] = SquareType.EMPTY;
-   		}
-   	    }
-   	}
+   	setStartingBoard();
+
+   	createNewPolyOnBoard();
     }
     /** Adds class objects that implements the interface BoardListener.*/
     public void addBoardListener(BoardListener bl) {
@@ -85,6 +81,36 @@ public class Board
          for (BoardListener listElement : listeners) {
              listElement.boardChanged();
  	 }
+    }
+
+    /** Restarts the game. */
+    public void restartGame() {
+	setStartingBoard();
+	gameOver = false;
+	setPolyIsFalling(false);
+    }
+
+    /** Creates an empty board for the start of the game. */
+    public void setStartingBoard() {
+	for (int column = 0; column < boardWidth; column++) {
+	    for (int row = 0; row < boardHeight; row++) {
+		if (column <= 1 || column >= PLAYING_BOARD_WIDTH + 2 ||
+		    row <= 1 || row >= PLAYING_BOARD_HEIGHT + 2) {
+		    squares[column][row] = SquareType.OUTSIDE;
+		} else {
+		    squares[column][row] = SquareType.EMPTY;
+		}
+	    }
+	}
+    }
+
+    public void createNewPolyOnBoard() {
+	polyX = STARTING_POLY_X;
+	polyY = STARTING_POLY_Y;
+	TetrominoMaker poly = new TetrominoMaker();
+	setPolyType(rnd.nextInt(poly.getNumberOfTypes()));
+	this.falling = poly.getPoly(polyType);
+	setPolyIsFalling(true);
     }
 
     /** Takes the rows to be deleted as argument and then loops through those rows,
@@ -104,31 +130,24 @@ public class Board
 	    }
 	}
 
-	//Moves down the rows above the delete ones.
-	//Does not work...
+	/* Moves down the rows above the delete ones. */
 	for (int row = rowsToDelete.get(amountOfRows - 1); row >= 2 + amountOfRows; row--) {
 	    for (int column = 0; column < boardWidth; column++) {
 	        squares[column][row] = squares[column][row - amountOfRows];
 	    }
 	}
-	/*
-	for (int column = 0; column < boardWidth; column++) {
-	    for (int row = rowsToDelete.get(amountOfRows); row >= 2; row--) {
-	        squares[column][row] = squares[column][row - amountOfRows];
-	    }
-	}*/
     }
 
     /** Checks if a row on board is full with poly's. If the row is full that row
      * is deleted via function deleteRow(). */
     public void checkFullRows() {
 
-	int polyCounter = 0; // Keeps count how many poly's there is in a row.
+        /* Keeps count how many poly's there is in a row. */
+	int polyCounter = 0;
 
 	List<Integer> rowsToDelete = new ArrayList<>();
 
-	for (int column = 0; column < realHeight; column++) {
-	    //System.out.println(row);
+	for (int column = 0; column < boardHeight; column++) {
 	    for (int row = 0; row < boardWidth; row++) {
 		if (squares[row][column] == SquareType.EMPTY ||
 		    squares[row][column] == SquareType.OUTSIDE) {
@@ -137,7 +156,6 @@ public class Board
 		    polyCounter++;
 
 		    if (polyCounter == PLAYING_BOARD_WIDTH) {
-			//deleteRows(column);
 			rowsToDelete.add(Integer.valueOf(column));
 		    }
 		}
@@ -146,7 +164,6 @@ public class Board
 	if (!rowsToDelete.isEmpty()) {
 	    deleteRows(rowsToDelete);
 	}
-
     }
 
     /** Function that rotates the falling poly. If the argument right is true,
@@ -163,22 +180,27 @@ public class Board
      * poly as it is.
      */
     public void rotate(boolean right) {
-        /* sizeOfPoly gets the size from the falling poly (width and height is the same in a poly) */
-	int sizeOfPoly = falling.getWidth();
-	Poly rotatedPoly = new Poly(new SquareType[sizeOfPoly][sizeOfPoly]);
 
-	for (int row = 0; row < sizeOfPoly; row++) {
-	    for (int column = 0; column < sizeOfPoly; column++) {
-		if (right) {
-		    rotatedPoly.getPolySquares()[sizeOfPoly - 1 - row][column] = this.falling.getPolySquares()[column][row];
-		}
-		else {
-		    rotatedPoly.getPolySquares()[row][sizeOfPoly - 1 - column] = this.falling.getPolySquares()[column][row];
+	if (polyIsFalling) {
+	    /* sizeOfPoly gets the size from the falling poly
+	    (width and height is the same in a poly) */
+	    int sizeOfPoly = falling.getSize();
+
+
+	    Poly rotatedPoly = new Poly(new SquareType[sizeOfPoly][sizeOfPoly]);
+
+	    for (int row = 0; row < sizeOfPoly; row++) {
+		for (int column = 0; column < sizeOfPoly; column++) {
+		    if (right) {
+			rotatedPoly.getPolySquares()[sizeOfPoly - 1 - row][column] = this.falling.getPolySquares()[column][row];
+		    } else {
+			rotatedPoly.getPolySquares()[row][sizeOfPoly - 1 - column] = this.falling.getPolySquares()[column][row];
+		    }
 		}
 	    }
-	}
-	if (!(hasCollision(polyX, polyY, rotatedPoly))) {
-	    this.falling = rotatedPoly;
+	    if (!(hasCollision(polyX, polyY, rotatedPoly))) {
+		this.falling = rotatedPoly;
+	    }
 	}
     }
 
@@ -198,9 +220,16 @@ public class Board
 	}
     }
 
-    /** This function looks at...*/
+    /** This function looks at everything that can happen at every "tick" of the game.
+     *  It checks, via other functions in this class:
+     *  - If there are any full rows.
+     *  - If a poly is currently falling:
+     *        > If that poly can continue to fall down (checks collition).
+     *        > If that poly can't continue to fall, places it on the board.
+     *  - If no poly is currently falling:
+     *        > Checks if there is any place for a new poly to be created (if not, game over)
+     **/
     public void tick() {
-	//Checks if there are any rows that are full and deletes full rows.
 	checkFullRows();
 
         if (polyIsFalling) {
@@ -209,13 +238,12 @@ public class Board
 	        notifyListeners();
 	    }
 	    else {
-		for (int polyRow = 0; polyRow < falling.getWidth(); polyRow++){
-		    for (int polyColumn = 0; polyColumn < falling.getHeight(); polyColumn++) {
+		for (int polyRow = 0; polyRow < falling.getSize(); polyRow++){
+		    for (int polyColumn = 0; polyColumn < falling.getSize(); polyColumn++) {
 		        if (falling.getPolySquares()[polyRow][polyColumn] != SquareType.EMPTY)
 		            squares[polyX + polyRow][polyY + polyColumn] = falling.getPolySquares()[polyRow][polyColumn];
 		    }
 		}
-		falling = null;
 		polyIsFalling = false;
 
 	    }
@@ -228,19 +256,27 @@ public class Board
 		polyX = STARTING_POLY_X;
 		polyY = STARTING_POLY_Y;
 		TetrominoMaker poly = new TetrominoMaker();
-		polyType = rnd.nextInt(poly.getNumberOfTypes());
+		setPolyType(rnd.nextInt(poly.getNumberOfTypes()));
 		this.falling = poly.getPoly(polyType);
 		setPolyIsFalling(true);
 	    }
     	}
     }
 
+    /** This function takes a potential new position for the falling poly and the current
+     * falling poly and checks if there is possible collition at the potential
+     * new position. */
     public boolean hasCollision(int newPolyX, int newPolyY, Poly poly) {
         if (poly == null) {
             return false;
 	}
-        for (int polyCol = 0; polyCol < poly.getWidth(); polyCol++){
-            for (int polyRow = 0; polyRow < poly.getHeight(); polyRow++) {
+        for (int polyCol = 0; polyCol < poly.getSize(); polyCol++){
+            for (int polyRow = 0; polyRow < poly.getSize(); polyRow++) {
+
+                /* Checks if the SquareType at polyCol and polyRow in the poly is not empty
+		 * and if the new potential position for the falling is not empty.
+		 * If that is the case, we have a collition.
+		 * */
 		if (poly.getPolySquares()[polyCol][polyRow] != SquareType.EMPTY &&
 		       squares[newPolyX + polyCol][newPolyY + polyRow] != SquareType.EMPTY) {
 		    return true;
@@ -250,9 +286,10 @@ public class Board
         return false;
     }
 
+    /** Gets the SquareType at a certian position. It takes a position and determines
+     *  if the square at that position is falling or is still.*/
     public SquareType getSquareAt(int x, int y) {
-	/* Takes a position and determines if the square at that position is
-	 * falling or is still.
+	/*
 	 */
 	int playX = x;
 	int playY = y;
@@ -264,35 +301,31 @@ public class Board
 	    return squares[playX][playY];
 	}
 	else {
-	    int polyX2 = polyX + falling.getWidth() - 1;
-	    int polyY2 = polyY + falling.getHeight() - 1;
+	    int polyX2 = polyX + falling.getSize() - 1;
+	    int polyY2 = polyY + falling.getSize() - 1;
 
-	    //Checks if x and y are within the coordinates of the Poly
+	    /* Checks if x and y are within the coordinates of the Poly. */
 	    if (x >= polyX && x <= polyX2 && y >= polyY && y <= polyY2) {
-		//Checks if the coordinate inside the Poly is empty or not
+
+		/* Checks if the coordinate inside the Poly is empty or not. */
 		if (falling.getPolySquares()[x - polyX][y - polyY] != SquareType.EMPTY) {
-		    //System.out.println("poly");
-		    //System.out.println(falling.getPolySquares()[x - polyX][y - polyY]);
-
 		    return falling.getPolySquares()[x - polyX][y - polyY];
-
 		}
-		//Else if there is no square at that position
+
+		/* Else if there is no square at that position. */
 		else {
-		    //System.out.println("board in poly");
-		    //return squares[playX][playY];
 		    return squares[x][y];
 		}
 	    }
-	    //There is no Poly at the position
+
+	    /* There is no Poly at the position. */
 	    else {
-		//System.out.println("board");
-		//return squares[playX][playY];
 		return squares[x][y];
 	    }
 	}
     }
 
+    /** Completely randomieses the board. Is not used in the actual game. */
     public void randomBoard() {
 	squares = new SquareType[PLAYING_BOARD_WIDTH][PLAYING_BOARD_HEIGHT];
 	for (int w = 0; w < PLAYING_BOARD_WIDTH; w++) {
@@ -303,22 +336,22 @@ public class Board
 	notifyListeners();
     }
 
-    public int getWidth() {
+    /** Getters and setters below. */
+
+    public int getPlayingBoardWidth() {
 	return PLAYING_BOARD_WIDTH;
     }
 
-    public int getHeight() {
+    public int getPlayingBoardHeight() {
 	return PLAYING_BOARD_HEIGHT;
     }
 
     public int getBoardWidth() {
-	//System.out.println(boardWidth);
     	return boardWidth;
         }
 
-    public int getRealHeight() {
-	//System.out.println(realHeight);
-        return realHeight;
+    public int getBoardHeight() {
+        return boardHeight;
     }
 
     public void setPolyType(final int polyType) {
