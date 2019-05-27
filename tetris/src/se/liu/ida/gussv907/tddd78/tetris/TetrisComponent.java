@@ -6,13 +6,15 @@ import java.awt.event.ActionEvent;
 import java.util.EnumMap;
 
 /**
- * Hello
+ * This class creates graphics for all the blocks in the game.
+ * It also creates actions for all the keypresses.
  */
 
 public class TetrisComponent extends JComponent implements BoardListener
 {
     private Board board;
-    private final static int SQUARE_PIXEL_SIZE = 30; //Size in pixels
+    /** Defines the size of every pixel in the game. */
+    private final static int SQUARE_PIXEL_SIZE = 30;
     private EnumMap<SquareType, Color> colorMap;
 
     public TetrisComponent(final Board board) {
@@ -37,6 +39,9 @@ public class TetrisComponent extends JComponent implements BoardListener
         return new Dimension(width, height);
     }
 
+    /** The paints everything that is on the board at the moment.
+     * Via the repaint function this function is called everytime something
+     * is changed on the board. */
     @Override
     public void paintComponent(Graphics g) {
 
@@ -54,6 +59,7 @@ public class TetrisComponent extends JComponent implements BoardListener
         }
     }
 
+    /** Gives each block type its own specific colour. */
     public void makeSquareTypeColors () {
         colorMap.put(SquareType.OUTSIDE, Color.BLACK);
         colorMap.put(SquareType.EMPTY, Color.LIGHT_GRAY);
@@ -70,11 +76,14 @@ public class TetrisComponent extends JComponent implements BoardListener
         return colorMap.get(square);
     }
 
+    /** Called everytime something changes on the board. */
     @Override public void boardChanged() {
         repaint();
     }
 
 
+    /** Creates all the keypresses and the actions to what shoukd happen when a key
+     * is pressed. */
     public void createKeyPresses () {
         this.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke("LEFT"),
                                                                 "left");

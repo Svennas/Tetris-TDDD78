@@ -6,15 +6,18 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- *
+ * This class handles the window in which the game is showed.
+ * This class creates everything that is not blocks (buttons etc.).
  */
 public class TetrisViewer
 {
     private JFrame frame;
     private Board board;
 
+    /** Size of the text on many menu's. */
     private static final int MENU_FONT_SIZE = 12;
 
+    /** Font used for the text on many menu's. */
     private Font menuFont= new Font("Arial", Font.PLAIN, MENU_FONT_SIZE);
 
     public TetrisViewer(TetrisComponent component, Board board) {
@@ -24,6 +27,8 @@ public class TetrisViewer
 	gameWindow(component);
     }
 
+    /** Creates the main window for the game. The window is always placed in the middle of
+     * the screen. */
     public void gameWindow(TetrisComponent component) {
         Toolkit tk = Toolkit.getDefaultToolkit();
         Dimension screenSize = tk.getScreenSize();
@@ -43,6 +48,12 @@ public class TetrisViewer
         frame.setVisible(true);
     }
 
+    /** Creates the menu bar at the top of the main window.
+     * Currently have the functions:
+     *  - Restart
+     *  - Exit
+     *  - Help (Shows info about the game)
+     *  */
     public JMenuBar createGameMenuBar() {
 
 	final JMenuBar menuBar = new JMenuBar();
@@ -79,6 +90,10 @@ public class TetrisViewer
 
 	        board.paused = true;
 
+		Object[] options = {
+		    "OK"
+		};
+
 		JTextArea message = new JTextArea(
 		"This is a simple version of the classic game Tetris"
 		+ "\n" + "\n" + "\n" +
@@ -95,16 +110,20 @@ public class TetrisViewer
 		message.setFont(menuFont);
 		message.setBackground(Color.lightGray);
 
-		JOptionPane.showMessageDialog(
-			frame, message, "About Tetris", JOptionPane.INFORMATION_MESSAGE);
+		int number = JOptionPane.showOptionDialog(
+			frame, message, "About Tetris", JOptionPane.DEFAULT_OPTION,
+			JOptionPane.INFORMATION_MESSAGE, null, options, options[0]);
+
+		if (number == 0) {
+		    board.paused = false;
+		}
 	    }
 	});
-
-	board.paused = false;
 
 	return menuBar;
     }
 
+    /** Help function that creates menu bar items for the menu bar. */
     public JMenuItem createMenuBarItem(JMenu menu, String itemName, char mnemonic) {
 
         JMenuItem newMenuItem = new JMenuItem(itemName, mnemonic);
@@ -115,6 +134,8 @@ public class TetrisViewer
         return newMenuItem;
     }
 
+    /** Creates the window that is showed when the game is over.
+     * Gives the options to exit the game or restart. */
     public void gameOverWindow() {
 
         JLabel message = new JLabel("YOU LOST THE GAME!");
@@ -134,6 +155,8 @@ public class TetrisViewer
        	else board.restartGame();
     }
 
+    /** This function is used everytime the user wants to exit the game.
+     * Gives a yes and no option. Shuts down the game if yes. */
     public void exitGame() {
 
         JLabel message = new JLabel("Are you sure you want to exit the game?");
