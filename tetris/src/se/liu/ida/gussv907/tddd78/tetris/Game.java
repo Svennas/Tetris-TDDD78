@@ -12,7 +12,7 @@ public class Game extends JComponent
     private Board board;
     private TetrisViewer viewer;
 
-    private final static int GAME_SPEED = 500;
+    private final static int GAME_SPEED = 400;
 
 
     public Game(Board board, TetrisViewer viewer)
@@ -28,10 +28,10 @@ public class Game extends JComponent
     private final Action oneGameStep = new AbstractAction()
     {
 	public void actionPerformed(ActionEvent event) {
-	    if (board.gameOver) {
+	    if (board.isGameOver()) {
 		viewer.gameOverWindow();
 	    }
-	    if (!board.paused) {
+	    if (!board.isPaused()) {
 		board.tick();
 	    }
 	}

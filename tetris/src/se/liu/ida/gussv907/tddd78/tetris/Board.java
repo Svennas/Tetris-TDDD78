@@ -16,29 +16,29 @@ public class Board
     private Random rnd = new Random();
     private int numOfTypes = SquareType.values().length;
 
-    private boolean polyIsFalling;
-    private int polyX;
-    private int polyY;
-    private int polyType;
-    private Poly falling;
+    private boolean polyIsFalling = false;
+    private int polyX = 0;
+    private int polyY = 0;
+    private Poly falling = null;
+    private TetrominoMaker maker;
 
     /** List of Boardlistener. This list is notified if something on the board has been
      * changed, which results in the board being repainted. */
     private List<BoardListener> listeners = new ArrayList<>();
 
     /** Public boolean that can tell all classes with a board field that the game is over.*/
-    public boolean gameOver = false;
+    private boolean gameOver = false;
     /** Public boolean that can tell all classes with a board that the game is paused. */
-    public boolean paused = false;
+    private boolean paused = false;
 
     /** Sets the height of the playable board.*/
-    public final static int PLAYING_BOARD_HEIGHT = 20; //Sets the height of the
+    private final static int PLAYING_BOARD_HEIGHT = 20; //Sets the height of the
     /** Sets the width of the playable board. */
-    public final static int PLAYING_BOARD_WIDTH = 10;
+    private final static int PLAYING_BOARD_WIDTH = 10;
     /** Sets the starting position X for the falling.  */
-    public final static int STARTING_POLY_X = PLAYING_BOARD_WIDTH / 2 + 1;
+    private final static int STARTING_POLY_X = PLAYING_BOARD_WIDTH / 2 + 1;
     /** Sets the starting position Y for the falling. */
-    public final static int STARTING_POLY_Y = 2;
+    private final static int STARTING_POLY_Y = 2;
 
     /** Constructor for Board. Takes no arguments, width and height is decided in class
      * by static int's (see above).
@@ -60,14 +60,13 @@ public class Board
     public Board() {
    	this.boardWidth = PLAYING_BOARD_WIDTH + 4;
    	this.boardHeight = PLAYING_BOARD_HEIGHT + 4;
-   	this.falling = new TetrominoMaker().emptyPoly();
-
-   	squares = new SquareType[boardWidth][boardHeight];
+   	this.maker = new TetrominoMaker();
+   	this.squares = new SquareType[boardWidth][boardHeight];
 
    	setStartingBoard();
-
-   	createNewPolyOnBoard();
     }
+
+
     /** Adds class objects that implements the interface BoardListener.*/
     public void addBoardListener(BoardListener bl) {
           listeners.add(bl);
@@ -91,7 +90,7 @@ public class Board
     }
 
     /** Creates an empty board for the start of the game. */
-    public void setStartingBoard() {
+    private void setStartingBoard() {
 	for (int column = 0; column < boardWidth; column++) {
 	    for (int row = 0; row < boardHeight; row++) {
 		if (column <= 1 || column >= PLAYING_BOARD_WIDTH + 2 ||
@@ -104,19 +103,20 @@ public class Board
 	}
     }
 
-    public void createNewPolyOnBoard() {
+    /** Creates a new falling poly on the board at the starting position for falliing polys. */
+    private void createNewPolyOnBoard() {
 	polyX = STARTING_POLY_X;
 	polyY = STARTING_POLY_Y;
-	TetrominoMaker poly = new TetrominoMaker();
-	setPolyType(rnd.nextInt(poly.getNumberOfTypes()));
-	this.falling = poly.getPoly(polyType);
+	int polyType = rnd.nextInt(maker.getNumberOfTypes());
+	falling = maker.getPoly(polyType);
 	setPolyIsFalling(true);
+	notifyListeners();
     }
 
     /** Takes the rows to be deleted as argument and then loops through those rows,
      * making all tetris blocks to empty blocks. After making them empty,
      * the rows above are moved down to fill the empty rows. */
-    public void deleteRows(List<Integer> rowsToDelete) {
+    private void deleteRows(List<Integer> rowsToDelete) {
 
         int amountOfRows = rowsToDelete.size();
 
@@ -140,7 +140,7 @@ public class Board
 
     /** Checks if a row on board is full with poly's. If the row is full that row
      * is deleted via function deleteRow(). */
-    public void checkFullRows() {
+    private void checkFullRows() {
 
         /* Keeps count how many poly's there is in a row. */
 	int polyCounter = 0;
@@ -182,26 +182,33 @@ public class Board
     public void rotate(boolean right) {
 
 	if (polyIsFalling) {
-	    /* sizeOfPoly gets the size from the falling poly
-	    (width and height is the same in a poly) */
-	    int sizeOfPoly = falling.getSize();
 
+	Poly rotated = createRotatedPoly(right);
 
-	    Poly rotatedPoly = new Poly(new SquareType[sizeOfPoly][sizeOfPoly]);
-
-	    for (int row = 0; row < sizeOfPoly; row++) {
-		for (int column = 0; column < sizeOfPoly; column++) {
-		    if (right) {
-			rotatedPoly.getPolySquares()[sizeOfPoly - 1 - row][column] = this.falling.getPolySquares()[column][row];
-		    } else {
-			rotatedPoly.getPolySquares()[row][sizeOfPoly - 1 - column] = this.falling.getPolySquares()[column][row];
-		    }
-		}
-	    }
-	    if (!(hasCollision(polyX, polyY, rotatedPoly))) {
-		this.falling = rotatedPoly;
+	    if (!(hasCollision(polyX, polyY, rotated))) {
+		falling = rotated;
 	    }
 	}
+    }
+
+    /** Creates a rotated poly for public function rotate. */
+    private Poly createRotatedPoly(boolean rotateRight) {
+	/* sizeOfPoly gets the size from the falling poly
+	(width and height is the same in a poly) */
+	int sizeOfPoly = falling.getSize();
+
+	Poly rotatedPoly = new Poly(new SquareType[sizeOfPoly][sizeOfPoly]);
+
+	for (int row = 0; row < sizeOfPoly; row++) {
+	    for (int column = 0; column < sizeOfPoly; column++) {
+		if (rotateRight) {
+		    rotatedPoly.getPolySquares()[sizeOfPoly - 1 - row][column] = falling.getPolySquares()[column][row];
+		} else {
+		    rotatedPoly.getPolySquares()[row][sizeOfPoly - 1 - column] = falling.getPolySquares()[column][row];
+		}
+	    }
+	}
+	return rotatedPoly;
     }
 
     /** Moves the falling poly one step to the right. */
@@ -238,14 +245,7 @@ public class Board
 	        notifyListeners();
 	    }
 	    else {
-		for (int polyRow = 0; polyRow < falling.getSize(); polyRow++){
-		    for (int polyColumn = 0; polyColumn < falling.getSize(); polyColumn++) {
-		        if (falling.getPolySquares()[polyRow][polyColumn] != SquareType.EMPTY)
-		            squares[polyX + polyRow][polyY + polyColumn] = falling.getPolySquares()[polyRow][polyColumn];
-		    }
-		}
-		polyIsFalling = false;
-
+	        placeFallingPolyOnBoard();
 	    }
     	}
         else {
@@ -253,23 +253,28 @@ public class Board
 		gameOver = true;
 	    }
             else {
-		polyX = STARTING_POLY_X;
-		polyY = STARTING_POLY_Y;
-		TetrominoMaker poly = new TetrominoMaker();
-		setPolyType(rnd.nextInt(poly.getNumberOfTypes()));
-		this.falling = poly.getPoly(polyType);
-		setPolyIsFalling(true);
+                createNewPolyOnBoard();
 	    }
     	}
+    }
+
+    /** Places the poly that is currently falling on the board. Then sets polyIsFalling to false to able a
+     * new poly to start falling. */
+    private void placeFallingPolyOnBoard() {
+	for (int polyRow = 0; polyRow < falling.getSize(); polyRow++){
+	    for (int polyColumn = 0; polyColumn < falling.getSize(); polyColumn++) {
+		if (falling.getPolySquares()[polyRow][polyColumn] != SquareType.EMPTY)
+		    squares[polyX + polyRow][polyY + polyColumn] = falling.getPolySquares()[polyRow][polyColumn];
+	    }
+	}
+	polyIsFalling = false;
     }
 
     /** This function takes a potential new position for the falling poly and the current
      * falling poly and checks if there is possible collition at the potential
      * new position. */
-    public boolean hasCollision(int newPolyX, int newPolyY, Poly poly) {
-        if (poly == null) {
-            return false;
-	}
+    private boolean hasCollision(int newPolyX, int newPolyY, Poly poly) {
+
         for (int polyCol = 0; polyCol < poly.getSize(); polyCol++){
             for (int polyRow = 0; polyRow < poly.getSize(); polyRow++) {
 
@@ -354,9 +359,16 @@ public class Board
         return boardHeight;
     }
 
-    public void setPolyType(final int polyType) {
-	this.polyType = polyType;
-	notifyListeners();
+    public boolean isGameOver() {
+	return gameOver;
+    }
+
+    public boolean isPaused() {
+	return paused;
+    }
+
+    public void setPaused(final boolean paused) {
+	this.paused = paused;
     }
 
     public void setPolyIsFalling(final boolean polyIsFalling) {

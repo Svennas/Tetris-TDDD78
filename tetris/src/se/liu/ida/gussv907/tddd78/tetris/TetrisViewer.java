@@ -29,7 +29,7 @@ public class TetrisViewer
 
     /** Creates the main window for the game. The window is always placed in the middle of
      * the screen. */
-    public void gameWindow(TetrisComponent component) {
+    private void gameWindow(TetrisComponent component) {
         Toolkit tk = Toolkit.getDefaultToolkit();
         Dimension screenSize = tk.getScreenSize();
 
@@ -54,7 +54,7 @@ public class TetrisViewer
      *  - Exit
      *  - Help (Shows info about the game)
      *  */
-    public JMenuBar createGameMenuBar() {
+    private JMenuBar createGameMenuBar() {
 
 	final JMenuBar menuBar = new JMenuBar();
 
@@ -88,7 +88,7 @@ public class TetrisViewer
 	{
 	    @Override public void actionPerformed(final ActionEvent e) {
 
-	        board.paused = true;
+	        board.setPaused(true);
 
 		Object[] options = {
 		    "OK"
@@ -115,7 +115,7 @@ public class TetrisViewer
 			JOptionPane.INFORMATION_MESSAGE, null, options, options[0]);
 
 		if (number == 0) {
-		    board.paused = false;
+		    board.setPaused(false);
 		}
 	    }
 	});
@@ -124,7 +124,7 @@ public class TetrisViewer
     }
 
     /** Help function that creates menu bar items for the menu bar. */
-    public JMenuItem createMenuBarItem(JMenu menu, String itemName, char mnemonic) {
+    private JMenuItem createMenuBarItem(JMenu menu, String itemName, char mnemonic) {
 
         JMenuItem newMenuItem = new JMenuItem(itemName, mnemonic);
         newMenuItem.setFont(menuFont);
@@ -157,7 +157,7 @@ public class TetrisViewer
 
     /** This function is used everytime the user wants to exit the game.
      * Gives a yes and no option. Shuts down the game if yes. */
-    public void exitGame() {
+    private void exitGame() {
 
         JLabel message = new JLabel("Are you sure you want to exit the game?");
         message.setFont(new Font("Arial", Font.PLAIN, MENU_FONT_SIZE));

@@ -47,7 +47,7 @@ public class TetrominoMaker
 	return poly;
     }
 
-    public static void emptyBackground(SquareType[][] square, int size) {
+    private static void emptyBackground(SquareType[][] square, int size) {
         for(int width = 0; width < size; width++) {
             for(int height = 0; height < size; height++) {
 		square[width][height] = SquareType.EMPTY;
@@ -166,13 +166,6 @@ public class TetrominoMaker
 	lSquare[1][2] = SquareType.L_BLOCK;
 	lSquare[2][2] = SquareType.L_BLOCK;
     	return new Poly(lSquare);
-    }
-
-    public Poly emptyPoly() {
-        int size = 1;
-        SquareType[][] empty = new SquareType[size][size];
-        emptyBackground(empty, size);
-        return new Poly(empty);
     }
 
     public static void main (String[] args) {

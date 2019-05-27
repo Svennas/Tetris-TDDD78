@@ -60,7 +60,7 @@ public class TetrisComponent extends JComponent implements BoardListener
     }
 
     /** Gives each block type its own specific colour. */
-    public void makeSquareTypeColors () {
+    private void makeSquareTypeColors () {
         colorMap.put(SquareType.OUTSIDE, Color.BLACK);
         colorMap.put(SquareType.EMPTY, Color.LIGHT_GRAY);
         colorMap.put(SquareType.I_BLOCK, Color.CYAN);
@@ -72,7 +72,7 @@ public class TetrisComponent extends JComponent implements BoardListener
         colorMap.put(SquareType.L_BLOCK, Color.BLUE);
     }
 
-    public Color getSquareTypeColor(SquareType square) {
+    private Color getSquareTypeColor(SquareType square) {
         return colorMap.get(square);
     }
 
@@ -84,7 +84,7 @@ public class TetrisComponent extends JComponent implements BoardListener
 
     /** Creates all the keypresses and the actions to what shoukd happen when a key
      * is pressed. */
-    public void createKeyPresses () {
+    private void createKeyPresses () {
         this.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke("LEFT"),
                                                                 "left");
         this.getActionMap().put("left", moveLeft);
@@ -115,14 +115,14 @@ public class TetrisComponent extends JComponent implements BoardListener
     };
 
     private final Action rotateRight = new AbstractAction() {
-                    @Override public void actionPerformed(final ActionEvent e) {
-                        board.rotate(true);
-                    }
-                };
+        @Override public void actionPerformed(final ActionEvent e) {
+            board.rotate(true);
+        }
+    };
 
     private final Action rotateLeft = new AbstractAction() {
-                @Override public void actionPerformed(final ActionEvent e) {
-                    board.rotate(false);
-                }
-            };
+        @Override public void actionPerformed(final ActionEvent e) {
+            board.rotate(false);
+        }
+    };
 }
