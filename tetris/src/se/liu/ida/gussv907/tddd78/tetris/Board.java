@@ -6,7 +6,7 @@ import java.util.*;
  * This class contains all the functions related to tetris board.
  * It contains all the information about the board and functions related to
  * getting, setting and changing the board and the poly's that is currently
- * on the board. 
+ * on the board.
  */
 public class Board
 {
