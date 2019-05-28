@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f9e77a8-344c-4ded-acbb-700623112dfa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/Poly.java" beforeDir="false" afterPath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/Poly.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/SquareType.java" beforeDir="false" afterPath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/SquareType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrisComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrisComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrisViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrisViewer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrisViewerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrisViewerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrominoMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrominoMaker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,8 +19,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrisViewerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="26" column="48" lean-forward="true" selection-start-line="26" selection-start-column="48" selection-end-line="26" selection-end-column="48" />
+            <state relative-caret-position="400">
+              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
             </state>
           </provider>
         </entry>
@@ -35,8 +28,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/BoardListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
+            <state relative-caret-position="96">
               <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/BoardTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrisViewer_version_one.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="128">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -44,12 +55,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
+            <state relative-caret-position="448">
               <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
-              <folding>
-                <element signature="e#484#699#0" expanded="true" />
-                <element signature="e#698#699#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -64,45 +71,23 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrisComponent.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="55" column="49" lean-forward="true" selection-start-line="55" selection-start-column="49" selection-end-line="55" selection-end-column="49" />
-              <folding>
-                <element signature="e#3198#3385#0" expanded="true" />
-                <element signature="e#3384#3385#0" expanded="true" />
-                <element signature="e#3431#3602#0" expanded="true" />
-                <element signature="e#3601#3602#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrisViewer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="28" column="72" selection-start-line="28" selection-start-column="72" selection-end-line="28" selection-end-column="72" />
+            <state relative-caret-position="368">
+              <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrominoMaker.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1408">
-              <caret line="129" column="18" lean-forward="true" selection-start-line="129" selection-start-column="18" selection-end-line="129" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/Board.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1430">
-              <caret line="134" column="9" lean-forward="true" selection-start-line="134" selection-start-column="9" selection-end-line="134" selection-end-column="9" />
+            <state relative-caret-position="539">
+              <caret line="59" column="34" lean-forward="true" selection-start-line="59" selection-start-column="34" selection-end-line="59" selection-end-column="34" />
               <folding>
+                <element signature="e#6489#6490#0" expanded="true" />
                 <element signature="e#6510#6511#0" expanded="true" />
+                <element signature="e#6540#6541#0" expanded="true" />
                 <element signature="e#6562#6563#0" expanded="true" />
               </folding>
             </state>
@@ -110,10 +95,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/Poly.java">
+        <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrominoMaker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+            <state relative-caret-position="891">
+              <caret line="129" column="18" selection-start-line="129" selection-start-column="18" selection-end-line="129" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrisComponent.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-85">
+              <caret line="36" selection-start-line="36" selection-end-line="36" />
             </state>
           </provider>
         </entry>
@@ -136,24 +130,23 @@
         <option value="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/Game.java" />
         <option value="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrisViewer.java" />
         <option value="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/Poly.java" />
-        <option value="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrisComponent.java" />
         <option value="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrisViewerTest.java" />
         <option value="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/Board.java" />
+        <option value="$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrisComponent.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1901" />
-    <option name="y" value="-861" />
-    <option name="width" value="960" />
-    <option name="height" value="1144" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -176,6 +169,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -184,6 +178,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554906381174" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="run.code.analysis.last.selected.profile" value="aTDDD78-2019-v1" />
   </component>
   <component name="RunDashboard">
@@ -244,19 +239,23 @@
       <updated>1554883532599</updated>
       <workItem from="1554883535285" duration="1359000" />
       <workItem from="1554896808998" duration="9303000" />
-      <workItem from="1554973870885" duration="21565000" />
+      <workItem from="1554973870885" duration="21670000" />
+      <workItem from="1555598397597" duration="623000" />
+      <workItem from="1556374363338" duration="3216000" />
+      <workItem from="1557057232411" duration="3157000" />
+      <workItem from="1557481140283" duration="3433000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32227000" />
+    <option name="totallyTimeSpent" value="42761000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-860" width="1216" height="1896" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" anchor="top" id="Run" order="0" visible="true" weight="0.18207927" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16522491" />
+      <window_info anchor="top" id="Run" order="0" weight="0.3518313" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10714286" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -298,18 +297,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/BoardTest.java">
+    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/Poly.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="10" lean-forward="true" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+        <state relative-caret-position="224">
+          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrisViewer_version_one.java" />
+    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrisViewer_version_one.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/BoardTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/BoardListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
+        <state relative-caret-position="96">
           <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrisViewerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -320,66 +346,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrisViewer.java">
+    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/Board.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="28" column="72" selection-start-line="28" selection-start-column="72" selection-end-line="28" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/Poly.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrisComponent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="55" column="49" lean-forward="true" selection-start-line="55" selection-start-column="49" selection-end-line="55" selection-end-column="49" />
+        <state relative-caret-position="539">
+          <caret line="59" column="34" lean-forward="true" selection-start-line="59" selection-start-column="34" selection-end-line="59" selection-end-column="34" />
           <folding>
-            <element signature="e#3198#3385#0" expanded="true" />
-            <element signature="e#3384#3385#0" expanded="true" />
-            <element signature="e#3431#3602#0" expanded="true" />
-            <element signature="e#3601#3602#0" expanded="true" />
+            <element signature="e#6489#6490#0" expanded="true" />
+            <element signature="e#6510#6511#0" expanded="true" />
+            <element signature="e#6540#6541#0" expanded="true" />
+            <element signature="e#6562#6563#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrominoMaker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1408">
-          <caret line="129" column="18" lean-forward="true" selection-start-line="129" selection-start-column="18" selection-end-line="129" selection-end-column="18" />
+        <state relative-caret-position="891">
+          <caret line="129" column="18" selection-start-line="129" selection-start-column="18" selection-end-line="129" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrisViewerTest.java">
+    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrisViewer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="26" column="48" lean-forward="true" selection-start-line="26" selection-start-column="48" selection-end-line="26" selection-end-column="48" />
+        <state relative-caret-position="368">
+          <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/Game.java">
+    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/TetrisComponent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
-          <folding>
-            <element signature="e#484#699#0" expanded="true" />
-            <element signature="e#698#699#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labbar/src/se/liu/ida/gussv907/tddd78/tetris/Board.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1430">
-          <caret line="134" column="9" lean-forward="true" selection-start-line="134" selection-start-column="9" selection-end-line="134" selection-end-column="9" />
-          <folding>
-            <element signature="e#6510#6511#0" expanded="true" />
-            <element signature="e#6562#6563#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-85">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
         </state>
       </provider>
     </entry>
