@@ -26,9 +26,9 @@ public class Board
      * changed, which results in the board being repainted. */
     private List<BoardListener> listeners = new ArrayList<>();
 
-    /** Public boolean that can tell all classes with a board field that the game is over.*/
+    /** Boolean that tells the game if its game over.*/
     private boolean gameOver = false;
-    /** Public boolean that can tell all classes with a board that the game is paused. */
+    /** Boolean for if the game is paused or not. */
     private boolean paused = false;
 
     /** Sets the height of the playable board.*/
@@ -191,7 +191,7 @@ public class Board
 	}
     }
 
-    /** Creates a rotated poly for public function rotate. */
+    /** Creates a rotated poly for function rotate. */
     private Poly createRotatedPoly(boolean rotateRight) {
 	/* sizeOfPoly gets the size from the falling poly
 	(width and height is the same in a poly) */
