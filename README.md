@@ -1,4 +1,8 @@
 # Tetris-TDDD78
-A game of Tetris from the course TDDD78.
+A game of Tetris from the course TDDD78 at Linköping University.
 
-This to test editing README in IntelliJ.
+This project contains a version of the famous game Tetris, made 
+from instruciton in the course TDDD78. 
+
+This is a very basic version of the game with plenty of ways to 
+improve. Might get back to it in the future.  
