@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f9e77a8-344c-4ded-acbb-700623112dfa" name="Default Changelist" comment="Testing to edit README in IntelliJ">
+    <list default="true" id="4f9e77a8-344c-4ded-acbb-700623112dfa" name="Default Changelist" comment="Changed README">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -129,7 +129,8 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/Programmering/Schack-TDDD78&quot;
   },
   &quot;keyToStringList&quot;: {
     &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
@@ -230,7 +231,14 @@
       <option name="presentableId" value="LOCAL−00001" />
       <updated>1689837586786</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL−00002" summary="Changed README">
+      <option name="closed" value="true" />
+      <created>1689852970532</created>
+      <option name="number" value="LOCAL−00002" />
+      <option name="presentableId" value="LOCAL−00002" />
+      <updated>1689852970532</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -276,7 +284,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Testing to edit README in IntelliJ" />
-    <option name="LAST_COMMIT_MESSAGE" value="Testing to edit README in IntelliJ" />
+    <MESSAGE value="Changed README" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed README" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/TDDD78_2019.iml">
